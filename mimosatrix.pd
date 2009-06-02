@@ -1,0 +1,68 @@
+#N canvas 0 26 1024 661 10;
+#X declare -lib iem_tab;
+#X declare -lib tof;
+#X declare -lib iem_tab;
+#X declare -lib tof;
+#X declare -lib iem_tab;
+#X declare -lib tof;
+#X declare -lib iem_tab;
+#X declare -lib tof;
+#X floatatom 643 328 5 0 0 0 - - -;
+#X obj 579 85 pianoroll pianoroll1 400 192 -12 12 24 16 0 0 1 0.521739
+0.391304 -1.56522 1 -2.6087 0.73913 -3.65217 0.521739 -6.78261 1 -8.86957
+0.478261 -10.9565 0.391304 -12 1 -10.9565 1 -9.91304 1 -7.82609 0.521739
+-5.73913 1 -3.65217 1 -2.6087 1 -3.65217 1 -5.73913 0.217391;
+#X obj 576 40 timing.tempo_;
+#X obj 463 380 mimosa-sampler;
+#X obj 473 551 ezdac~;
+#X obj 642 298 int;
+#X obj 176 84 pianoroll pianoroll1 400 192 -12 12 24 16 0 0 1 -9.91304
+0.391304 1.56522 1 -9.91304 0.73913 -3.65217 0.521739 0.521739 1 -9.91304
+0.478261 -5.73913 0.391304 -3.65217 1 -6.78261 1 -5.73913 0.347826
+-9.91304 0.521739 -4.69565 1 -9.91304 1 -4.69565 1 -5.73913 1 -1.56522
+0.217391;
+#X obj 347 381 mimosa-sampler;
+#X floatatom 178 322 5 0 0 0 - - -;
+#X obj 177 292 int;
+#X floatatom 636 12 5 0 0 0 - - -;
+#X obj 692 305 bang;
+#X obj 766 362 + 1;
+#X obj 576 380 mimosa-sampler;
+#X obj 396 38 timing.tempo_;
+#X floatatom 456 10 5 0 0 0 - - -;
+#X obj 715 376 + 1;
+#X obj 690 350 random 4;
+#X obj 718 405 * 30;
+#X obj 522 7 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 219 382 mimosa-sampler;
+#X obj 761 332 random 4;
+#X obj 769 391 * 15;
+#X connect 0 0 3 0;
+#X connect 0 0 20 0;
+#X connect 1 0 5 0;
+#X connect 2 0 1 0;
+#X connect 2 0 6 0;
+#X connect 3 0 4 1;
+#X connect 5 0 0 0;
+#X connect 5 0 11 0;
+#X connect 6 0 9 0;
+#X connect 7 0 4 0;
+#X connect 8 0 7 0;
+#X connect 8 0 13 0;
+#X connect 9 0 8 0;
+#X connect 10 0 2 1;
+#X connect 11 0 17 0;
+#X connect 11 0 21 0;
+#X connect 12 0 22 0;
+#X connect 13 0 4 0;
+#X connect 14 0 6 0;
+#X connect 15 0 14 1;
+#X connect 16 0 18 0;
+#X connect 17 0 16 0;
+#X connect 18 0 15 0;
+#X connect 19 0 14 0;
+#X connect 19 0 2 0;
+#X connect 20 0 4 1;
+#X connect 21 0 12 0;
+#X connect 22 0 10 0;

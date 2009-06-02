@@ -1,0 +1,26 @@
+#N canvas 0 48 1024 661 10;
+#X declare -lib iem_tab;
+#X declare -lib tof;
+#X obj 174 262 ezdac~;
+#X text 84 118 crop de trecho;
+#X text 285 111 zera tabela;
+#X text 183 71 |;
+#X obj 174 90 mimosa-sampler;
+#X floatatom 174 39 5 0 0 0 - - -;
+#X text 187 54 ------------------------------------- gravar microfone
+;
+#X text 185 21 tonalidade;
+#X text 183 59 |;
+#X text 214 74 |;
+#X text 218 69 ------------------------------------- arquivo wav ou
+aiff;
+#X obj 17 29 key;
+#X obj 15 50 sel 48;
+#X obj 15 73 0;
+#X text 41 30 tecla 0 ascii;
+#X connect 4 0 0 0;
+#X connect 4 0 0 1;
+#X connect 5 0 4 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 4 0;
