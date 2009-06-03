@@ -1,0 +1,6 @@
+#N canvas 93 99 450 300 10;
+#X msg 29 54 bang;
+#X obj 29 75 print id:\$0 var1:\$1 var2:\$2;
+#X obj 29 27 inlet;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;

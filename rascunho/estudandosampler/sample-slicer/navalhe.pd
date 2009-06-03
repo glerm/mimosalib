@@ -1,0 +1,88 @@
+#N canvas 0 26 1024 661 10;
+#X floatatom 136 19 5 0 0 0 - - -;
+#X obj 59 30 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 151 184 smp-slice;
+#X obj 197 324 dac~;
+#X obj 43 71 metro 100;
+#X obj 358 92 vsl 15 70 0.5 2 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 2300 1;
+#X floatatom 287 46 5 0 0 0 - - -;
+#X msg 623 161 reset bang \, filename /home/glerm/samples/patchenloops/3449_patchen_Trickyhop_abcd.wav
+\, end 0 0.12015 \, end 1 0.197747 \, end 2 0.24781 \, end 3 0.322904
+\, end 4 0.446809 \, end 5 0.571965 \, end 6 0.745932 \, end 7 0.998748
+\, end 8 1 \, start 1 0.121402 \, start 2 0.197747 \, start 3 0.246558
+\, start 4 0.326658 \, start 5 0.44806 \, start 6 0.574468 \, start
+7 0.745932 \, start 8 0.745932 \, done bang \;;
+#X obj 429 -21 metroslice8;
+#X floatatom 439 91 5 0 0 0 - - -;
+#X obj 368 24 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 403 144 breakpoint;
+#X obj 402 120 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 276 11 counter 7;
+#X obj 116 119 / 1000;
+#X obj 115 99 random 2000;
+#X obj 116 141 spigot;
+#X obj 189 109 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 600 326 reset bang \, filename /home/glerm/samples/patchenloops/3453_patchen_over_dry.wav
+\, end 0 0.122653 \, end 1 0.185232 \, end 2 0.372966 \, end 3 0.559449
+\, end 4 0.687109 \, end 5 0.770964 \, end 6 0.87234 \, end 7 1 \,
+start 1 0.122653 \, start 2 0.185232 \, start 3 0.372966 \, start 4
+0.560701 \, start 5 0.685857 \, start 6 0.767209 \, start 7 0.87234
+\, done bang \;;
+#X obj 544 128 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 544 153 sel 0 1;
+#X msg 381 432 reset bang \, filename /home/glerm/samples/cadela.wav
+\, end 0 0.250313 \, end 1 0.250313 \, end 2 0.51189 \, end 3 0.619524
+\, end 4 0.765957 \, end 5 1 \, end 6 0.618273 \, end 7 0.51189 \,
+start 1 0.128911 \, start 2 0.249061 \, start 3 0.513141 \, start 4
+0.620776 \, start 5 0.767209 \, start 6 0.515645 \, start 7 0.250313
+\, done bang \;;
+#X obj 52 320 list-dripslow;
+#X obj 54 349 autoscale 0.5 2;
+#X msg 357 69 1;
+#X obj 58 374 spigot;
+#X obj 103 375 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 131 452 12 0 -12;
+#X obj 179 421 prepend set;
+#X msg 204 391 12 0 -12;
+#X msg 202 369 0 2 5 6 -8;
+#X connect 0 0 4 1;
+#X connect 1 0 4 0;
+#X connect 2 0 3 0;
+#X connect 2 0 3 1;
+#X connect 2 1 3 1;
+#X connect 4 0 13 0;
+#X connect 4 0 15 0;
+#X connect 4 0 22 0;
+#X connect 5 0 2 1;
+#X connect 7 0 2 2;
+#X connect 8 0 9 0;
+#X connect 8 0 2 0;
+#X connect 12 0 11 0;
+#X connect 13 0 6 0;
+#X connect 13 0 8 0;
+#X connect 14 0 16 0;
+#X connect 15 0 14 0;
+#X connect 16 0 5 0;
+#X connect 17 0 16 1;
+#X connect 18 0 2 2;
+#X connect 19 0 20 0;
+#X connect 20 0 18 0;
+#X connect 20 1 7 0;
+#X connect 21 0 2 2;
+#X connect 22 0 23 0;
+#X connect 22 1 27 0;
+#X connect 23 0 25 0;
+#X connect 24 0 5 0;
+#X connect 25 0 5 0;
+#X connect 26 0 25 1;
+#X connect 27 0 22 1;
+#X connect 28 0 27 0;
+#X connect 29 0 28 0;
+#X connect 30 0 28 0;
