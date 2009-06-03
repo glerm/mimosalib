@@ -1,0 +1,5 @@
+organizando:
+1)deixar sempre o repositorio local com a branch rascunho
+2)arquivos que ja tenham utilidade para a mimosalib podem ser tirados da pasta
+3) quando fizer o merge do rascunho no master, sempre apagar a pasta rascunho no branch master 
+
