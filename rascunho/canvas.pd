@@ -1,10 +1,6 @@
 #N canvas 175 173 620 436 10;
-#X obj 35 133 cnv 15 100 60 empty \$0-tela sol 20 12 0 40 -261682 -66577
-0;
-#X obj 143 55 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 103 96 hsl 128 15 0 127 0 0 empty empty sss -2 -8 0 10 -262144
--1 -1 0 1;
+#X obj 358 302 cnv 15 100 60 empty \$0-tela comofas 20 12 0 40 -261682
+-66577 0;
 #X obj 191 283 s \$0-tela;
 #X msg 164 231 label \$1;
 #X symbolatom 185 190 10 0 0 0 - - -;
@@ -15,21 +11,47 @@
 #X obj 293 211 pack 0 0;
 #X text 340 162 x-position;
 #X text 374 184 y-position;
-#X obj 420 224 pack f f;
 #X msg 271 236 pos \$1 \$2;
 #X floatatom 317 98 5 0 0 0 - - -;
 #X floatatom 358 123 5 0 0 0 - - -;
-#X connect 4 0 3 0;
+#X obj 365 54 metro 100;
+#X obj 373 80 counter 500;
+#X obj 349 34 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X floatatom 415 40 5 0 0 0 - - -;
+#X obj 456 137 snapshot~;
+#X obj 456 113 osc~ 1;
+#X obj 451 237 dac~;
+#X obj 455 203 osc~;
+#X obj 447 161 autoscale 300 350;
+#X floatatom 476 86 5 0 0 0 - - -;
+#X obj 475 41 random 4;
+#X obj 442 19 metro 250;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 4 0 8 0;
 #X connect 5 0 4 0;
-#X connect 6 0 10 0;
-#X connect 7 0 6 0;
-#X connect 8 0 6 1;
-#X connect 8 0 7 0;
-#X connect 9 0 10 1;
-#X connect 9 0 7 0;
-#X connect 10 0 14 0;
-#X connect 14 0 3 0;
-#X connect 15 0 6 1;
-#X connect 15 0 7 0;
-#X connect 16 0 10 1;
-#X connect 16 0 7 0;
+#X connect 6 0 4 1;
+#X connect 6 0 5 0;
+#X connect 7 0 8 1;
+#X connect 7 0 5 0;
+#X connect 8 0 11 0;
+#X connect 11 0 1 0;
+#X connect 12 0 4 1;
+#X connect 12 0 5 0;
+#X connect 13 0 8 1;
+#X connect 13 0 5 0;
+#X connect 13 0 21 0;
+#X connect 14 0 15 0;
+#X connect 14 0 18 0;
+#X connect 15 0 12 0;
+#X connect 16 0 14 0;
+#X connect 16 0 25 0;
+#X connect 17 0 14 1;
+#X connect 18 0 22 0;
+#X connect 19 0 18 0;
+#X connect 21 0 20 0;
+#X connect 22 0 13 0;
+#X connect 23 0 19 0;
+#X connect 24 0 23 0;
+#X connect 25 0 24 0;
