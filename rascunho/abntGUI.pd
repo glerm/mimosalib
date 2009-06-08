@@ -1,0 +1,241 @@
+#N canvas 0 0 870 529 10;
+#N canvas 41 199 824 355 keydisplay 0;
+#X obj 102 102 cnv 4 275 80 empty empty empty 20 12 0 14 -66577 -262144
+0;
+#X obj 106 119 cnv 4 175 58 empty empty empty 20 12 0 14 -166441 -262144
+0;
+#X obj 124 130 cnv 10 10 10 empty keycq Q 3 5 1 5 -228801 -262144 0
+;
+#X obj 136 130 cnv 10 10 10 empty keycw W 2 5 1 5 -228801 -262144 0
+;
+#X obj 148 130 cnv 10 10 10 empty keyce E 2 5 1 5 -228801 -262144 0
+;
+#X obj 160 130 cnv 10 10 10 empty keycr R 3 5 1 5 -228801 -262144 0
+;
+#X obj 172 130 cnv 10 10 10 empty keyct T 4 5 1 5 -228801 -262144 0
+;
+#X obj 184 130 cnv 10 10 10 empty keycy Y 3 5 1 5 -228801 -262144 0
+;
+#X obj 196 130 cnv 10 10 10 empty keycu U 3 5 1 5 -228801 -262144 0
+;
+#X obj 208 130 cnv 10 10 10 empty keyci I 4 5 1 5 -228801 -262144 0
+;
+#X obj 220 130 cnv 10 10 10 empty keyco O 3 5 1 5 -228801 -262144 0
+;
+#X obj 232 130 cnv 10 10 10 empty keycp P 2 5 1 5 -228801 -262144 0
+;
+#X obj 256 130 cnv 10 10 10 empty keyc] ] 5 4 1 5 -195568 -262144 0
+;
+#X obj 128 142 cnv 10 10 10 empty keyca A 3 5 1 5 -228801 -262144 0
+;
+#X obj 140 142 cnv 10 10 10 empty keycs S 4 6 2 5 -228801 -262144 0
+;
+#X obj 152 142 cnv 10 10 10 empty keycd D 2 5 1 5 -228801 -262144 0
+;
+#X obj 164 142 cnv 10 10 10 empty keycf F 3 5 1 5 -228801 -262144 0
+;
+#X obj 176 142 cnv 10 10 10 empty keycg G 3 5 1 5 -228801 -262144 0
+;
+#X obj 188 142 cnv 10 10 10 empty keych H 3 5 1 5 -228801 -262144 0
+;
+#X obj 200 142 cnv 10 10 10 empty keycj J 3 5 1 5 -228801 -262144 0
+;
+#X obj 212 142 cnv 10 10 10 empty keyck K 3 5 1 5 -228801 -262144 0
+;
+#X obj 224 142 cnv 10 10 10 empty keycl L 3 5 1 5 -228801 -262144 0
+;
+#X obj 236 142 cnv 10 10 10 empty empty : 3 4 1 5 -195568 -262144 0
+;
+#X obj 260 142 cnv 10 10 10 empty empty | 3 4 1 5 -195568 -262144 0
+;
+#X obj 135 154 cnv 10 10 10 empty keycz Z 4 6 2 5 -228801 -262144 0
+;
+#X obj 147 154 cnv 10 10 10 empty keycx X 3 5 1 5 -228801 -262144 0
+;
+#X obj 159 154 cnv 10 10 10 empty keycc C 3 5 1 5 -228801 -262144 0
+;
+#X obj 171 154 cnv 10 10 10 empty keycv V 3 5 1 5 -228801 -262144 0
+;
+#X obj 183 154 cnv 10 10 10 empty keycb B 2 5 1 5 -228801 -262144 0
+;
+#X obj 195 154 cnv 10 10 10 empty keycn N 2 5 1 6 -228801 -262144 0
+;
+#X obj 207 154 cnv 10 10 10 empty keycm M 3 5 1 5 -228801 -262144 0
+;
+#X obj 219 154 cnv 10 10 10 empty empty < 3 5 1 5 -195568 -262144 0
+;
+#X obj 231 154 cnv 10 10 10 empty keyc. . 3 5 1 5 -228801 -262144 0
+;
+#X obj 243 154 cnv 10 10 10 empty keyc/ / 3 5 1 5 -195568 -262144 0
+;
+#X obj 119 118 cnv 10 10 10 empty keyc1 1 3 5 1 5 -195568 -262144 0
+;
+#X obj 131 118 cnv 10 10 10 empty keyc2 2 4 5 1 5 -195568 -262144 0
+;
+#X obj 143 118 cnv 10 10 10 empty keyc3 3 4 5 1 5 -195568 -262144 0
+;
+#X obj 155 118 cnv 10 10 10 empty keyc4 4 4 5 1 5 -195568 -262144 0
+;
+#X obj 167 118 cnv 10 10 10 empty keyc5 5 4 5 1 5 -195568 -262144 0
+;
+#X obj 179 118 cnv 10 10 10 empty keyc6 6 4 5 1 5 -195568 -262144 0
+;
+#X obj 191 118 cnv 10 10 10 empty keyc7 7 5 5 1 5 -195568 -262144 0
+;
+#X obj 203 118 cnv 10 10 10 empty keyc8 8 4 5 1 5 -195568 -262144 0
+;
+#X obj 215 118 cnv 10 10 10 empty keyc9 9 4 5 1 5 -195568 -262144 0
+;
+#X obj 227 118 cnv 10 10 10 empty keyc0 0 4 5 1 5 -195568 -262144 0
+;
+#X obj 239 118 cnv 10 10 10 empty empty - 4 5 1 6 -195568 -262144 0
+;
+#X obj 251 118 cnv 10 10 10 empty empty = 3 5 1 7 -195568 -262144 0
+;
+#X obj 107 118 cnv 10 10 10 empty empty ~ 3 3 1 7 -195568 -262144 0
+;
+#X obj 107 130 cnv 10 15 10 empty empty Tab 3 5 1 5 -195568 -262144
+0;
+#X obj 107 142 cnv 10 19 10 empty empty CL 3 5 1 5 -195568 -262144
+0;
+#X obj 107 154 cnv 10 14 10 empty keycShift_L ^ 3 5 1 5 -195568 -262144
+0;
+#X obj 123 154 cnv 10 10 10 empty empty empty 3 5 1 5 -195568 -262144
+0;
+#X obj 263 118 cnv 10 19 10 empty empty <<< 4 5 1 5 -195568 -262144
+0;
+#X obj 255 154 cnv 10 27 10 empty empty ^ 3 5 1 5 -195568 -262144 0
+;
+#X obj 268 130 cnv 10 14 10 empty keycReturn empty 4 5 1 7 -228801
+-262144 0;
+#X obj 272 140 cnv 10 10 12 empty keycReturn empty 3 5 1 5 -228801
+-262144 0;
+#X obj 151 166 cnv 10 73 10 empty empty empty 3 5 1 5 -195568 -262144
+0;
+#X obj 129 166 cnv 10 20 10 empty keycAlt_L ALT 3 5 1 5 -195568 -262144
+0;
+#X obj 107 166 cnv 10 20 10 empty keycControl_L CTRL 3 5 1 5 -195568
+-262144 0;
+#X obj 226 166 cnv 10 20 10 empty empty ALT 4 5 1 5 -195568 -262144
+0;
+#X obj 262 166 cnv 10 20 10 empty empty CTRL 3 5 1 5 -195568 -262144
+0;
+#X obj 248 166 cnv 10 12 10 empty empty empty 3 5 1 5 -195568 -262144
+0;
+#X obj 244 130 cnv 10 10 10 empty keyc[ [ 3 4 1 5 -195568 -262144 0
+;
+#X obj 248 142 cnv 10 10 10 empty keyc' ' 4 4 1 5 -195568 -262144 0
+;
+#X obj 106 107 cnv 4 11 8 empty empty empty 20 12 0 14 -166441 -262144
+0;
+#X obj 107 106 cnv 8 11 8 empty empty Es 1 4 1 5 -195568 -262144 0
+;
+#X obj 326 119 cnv 4 46 58 empty empty empty 20 12 0 14 -166441 -262144
+0;
+#X obj 327 118 cnv 10 10 10 empty empty empty 3 5 1 5 -195568 -262144
+0;
+#X obj 339 118 cnv 10 10 10 empty empty / 4 5 1 5 -195568 -262144 0
+;
+#X obj 351 118 cnv 10 10 10 empty empty * 4 7 1 8 -195568 -262144 0
+;
+#X obj 363 118 cnv 10 10 10 empty empty - 4 4 1 8 -195568 -262144 0
+;
+#X obj 327 130 cnv 10 10 10 empty empty 7 3 5 0 6 -195568 -262144 0
+;
+#X obj 339 130 cnv 10 10 10 empty empty 8 3 5 0 6 -195568 -262144 0
+;
+#X obj 351 130 cnv 10 10 10 empty empty 9 3 5 0 6 -195568 -262144 0
+;
+#X obj 363 130 cnv 10 10 22 empty empty + 3 12 1 8 -195568 -262144
+0;
+#X obj 327 142 cnv 10 10 10 empty empty 4 3 5 0 6 -195568 -262144 0
+;
+#X obj 339 142 cnv 10 10 10 empty empty 5 3 5 0 6 -195568 -262144 0
+;
+#X obj 351 142 cnv 10 10 10 empty empty 6 3 5 0 6 -195568 -262144 0
+;
+#X obj 327 154 cnv 10 10 10 empty empty 1 3 5 0 6 -195568 -262144 0
+;
+#X obj 339 154 cnv 10 10 10 empty empty 2 3 5 0 6 -195568 -262144 0
+;
+#X obj 351 154 cnv 10 10 10 empty empty 3 3 5 0 6 -195568 -262144 0
+;
+#X obj 351 166 cnv 10 10 10 empty empty . 4 3 1 5 -195568 -262144 0
+;
+#X obj 363 154 cnv 10 10 22 empty empty e 3 8 1 7 -195568 -262144 0
+;
+#X obj 327 166 cnv 10 22 10 empty empty 0 4 5 1 5 -195568 -262144 0
+;
+#X obj 286 119 cnv 4 34 22 empty empty empty 20 12 0 14 -166441 -262144
+0;
+#X obj 287 118 cnv 10 10 10 empty keycInsert In 3 5 1 5 -195568 -262144
+0;
+#X obj 299 118 cnv 10 10 10 empty keycHome Hm 0 5 1 5 -195568 -262144
+0;
+#X obj 311 118 cnv 10 10 10 empty keycPrior PU 0 5 1 5 -195568 -262144
+0;
+#X obj 287 130 cnv 10 10 10 empty keycDelete D 3 5 1 5 -195568 -262144
+0;
+#X obj 299 130 cnv 10 10 10 empty keycEnd En 1 5 1 5 -195568 -262144
+0;
+#X obj 311 130 cnv 10 10 10 empty keycNext PD 0 5 1 5 -195568 -262144
+0;
+#X obj 287 155 cnv 4 34 22 empty empty empty 20 12 0 14 -166441 -262144
+0;
+#X obj 287 155 cnv 10 11 11 empty empty empty 3 5 1 5 -233017 -262144
+0;
+#X obj 288 166 cnv 10 10 10 empty keycLeft < 4 5 1 5 -195568 -262144
+0;
+#X obj 300 166 cnv 10 10 10 empty keycDown V 3 5 1 5 -195568 -262144
+0;
+#X obj 310 155 cnv 10 11 11 empty empty empty 3 5 1 5 -233017 -262144
+0;
+#X obj 300 154 cnv 10 10 10 empty keycUp ^ 3 5 1 5 -195568 -262144
+0;
+#X obj 312 166 cnv 10 10 10 empty keycRight > 4 5 1 5 -195568 -262144
+0;
+#X obj 286 107 cnv 4 34 8 empty empty empty 20 12 0 14 -166441 -262144
+0;
+#X obj 287 106 cnv 8 10 8 empty empty empty 0 4 1 5 -195568 -262144
+0;
+#X obj 299 106 cnv 8 10 8 empty empty empty 0 4 1 5 -195568 -262144
+0;
+#X obj 311 106 cnv 8 10 8 empty keycPause P 2 4 1 5 -195568 -262144
+0;
+#X obj 121 107 cnv 4 50 8 empty empty empty 20 12 0 14 -166441 -262144
+0;
+#X obj 122 106 cnv 8 11 8 empty keycf1 F1 2 4 1 5 -195568 -262144 0
+;
+#X obj 135 106 cnv 8 11 8 empty keycf2 F2 2 4 1 5 -195568 -262144 0
+;
+#X obj 148 106 cnv 8 11 8 empty keycf3 F3 2 4 1 5 -195568 -262144 0
+;
+#X obj 161 106 cnv 8 11 8 empty keycf4 F4 2 4 1 5 -195568 -262144 0
+;
+#X obj 176 107 cnv 4 50 8 empty empty empty 20 12 0 14 -166441 -262144
+0;
+#X obj 177 106 cnv 8 11 8 empty keycf5 F5 2 4 1 5 -195568 -262144 0
+;
+#X obj 190 106 cnv 8 11 8 empty keycf6 F6 2 4 1 5 -195568 -262144 0
+;
+#X obj 203 106 cnv 8 11 8 empty keycf7 F7 3 4 1 5 -195568 -262144 0
+;
+#X obj 216 106 cnv 8 11 8 empty keycf8 F8 2 4 1 5 -195568 -262144 0
+;
+#X obj 231 107 cnv 4 50 8 empty empty empty 20 12 0 14 -166441 -262144
+0;
+#X obj 232 106 cnv 8 11 8 empty keycf9 F9 2 4 1 5 -195568 -262144 0
+;
+#X obj 245 106 cnv 8 11 8 empty keycf10 F10 0 4 1 5 -195568 -262144
+0;
+#X obj 258 106 cnv 8 11 8 empty keycf11 F11 0 4 1 5 -195568 -262144
+0;
+#X obj 271 106 cnv 8 11 8 empty keycf12 F12 0 4 1 5 -195568 -262144
+0;
+#X obj 359 102 bng 15 250 50 0 resetkeys empty empty 0 -6 0 8 -128992
+-228856 -1;
+#X obj 430 99 keyboardkeys/allkeys_bangs;
+#X text 431 113 use 'allkeys_bangs' or 'allkeys_toggles';
+#X text 640 79 reset->;
+#X coords 0 -1 1 1 280 85 2 100 100;
+#X restore -40 -38 pd keydisplay;
