@@ -1,0 +1,10 @@
+#N canvas 77 181 326 312 10;
+#X obj 85 37 comport 4 19200;
+#X msg 84 170 0 152 0 180 123 0 152;
+#X obj 86 120 prepend set;
+#X obj 174 141 s wii;
+#X obj 90 74 serialize 7;
+#X connect 0 0 4 0;
+#X connect 2 0 1 0;
+#X connect 4 0 2 0;
+#X connect 4 0 3 0;

@@ -1,9 +1,9 @@
-#N canvas 0 26 1003 661 10;
+#N canvas -90 26 1003 662 10;
 #X declare -stdpath extra/tof;
 #X obj 101 250 hsl 800 12 0 1 0 0 \$0-start \$0-start-r empty -2 -8
-0 10 -182874 -1 -1 65000 1;
+0 10 -182874 -1 -1 0 1;
 #X obj 101 263 hsl 800 12 0 1 0 0 \$0-end \$0-end-r empty -2 -8 0 10
--182874 -1 -1 79900 1;
+-182874 -1 -1 14200 1;
 #N canvas 113 28 815 634 guts 0;
 #X obj 633 391 soundfiler;
 #X obj 623 224 openpanel;
@@ -315,7 +315,7 @@
 #X obj 597 142 r \$0-slice;
 #X obj 597 172 makefilename notatrecho%d;
 #X msg 597 201 add \$1;
-#X msg 507 416 add notatrecho7;
+#X msg 507 416 add notatrecho0;
 #X obj 597 236 prepend set;
 #X obj 507 308 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -451,7 +451,7 @@ OPEN 17 7 0 14 -262144 -1 -1;
 #X obj 908 209 tgl 15 0 \$0-spigoot \$0-spigoot-r lock-length 17 7
 0 14 -262144 -1 -1 1 1;
 #X obj 99 307 hradio 50 1 0 16 \$0-slice \$0-slicerpanel empty 0 -8
-0 10 -54277 -83269 -1 7;
+0 10 -54277 -83269 -1 0;
 #X obj 164 283 cnv 15 30 20 empty empty 1 0 10 1 30 -204786 -13330
 0;
 #X obj 212 282 cnv 15 30 20 empty empty 2 0 12 1 30 -204786 -13330
@@ -681,7 +681,7 @@ bang \;;
 #X floatatom 281 16 5 0 0 0 - - -;
 #X floatatom 382 32 5 0 0 0 - - -;
 #X obj 40 9 color.rgbset;
-#N canvas 278 280 682 385 ascii 0;
+#N canvas 278 277 682 385 ascii 0;
 #X obj 75 62 key;
 #X floatatom 174 51 5 0 0 0 - - -;
 #X msg 40 133 0;
@@ -708,6 +708,18 @@ bang \;;
 #X msg 518 152 15;
 #X obj 227 28 sel 10;
 #X obj 222 50 s \$0-enterR;
+#X obj 357 267 sel 122 120 99 118 98 110 109 44 46 29;
+#X msg 451 301 0;
+#X msg 477 297 1;
+#X msg 506 298 2;
+#X msg 534 299 3;
+#X msg 419 300 -1;
+#X msg 391 299 -2;
+#X msg 362 298 -3;
+#X msg 335 297 -4;
+#X msg 563 300 4;
+#X obj 432 351 s \$0-tone;
+#X obj 364 242 key;
 #X connect 0 0 1 0;
 #X connect 0 0 11 0;
 #X connect 0 0 24 0;
@@ -745,6 +757,25 @@ bang \;;
 #X connect 22 0 4 0;
 #X connect 23 0 4 0;
 #X connect 24 0 25 0;
+#X connect 26 0 34 0;
+#X connect 26 2 33 0;
+#X connect 26 3 32 0;
+#X connect 26 4 31 0;
+#X connect 26 5 27 0;
+#X connect 26 6 28 0;
+#X connect 26 7 29 0;
+#X connect 26 8 30 0;
+#X connect 26 9 35 0;
+#X connect 27 0 36 0;
+#X connect 28 0 36 0;
+#X connect 29 0 36 0;
+#X connect 30 0 36 0;
+#X connect 31 0 36 0;
+#X connect 32 0 36 0;
+#X connect 33 0 36 0;
+#X connect 34 0 36 0;
+#X connect 35 0 36 0;
+#X connect 37 0 26 0;
 #X restore 73 190 pd ascii;
 #X obj 75 212 spigot;
 #X obj 55 191 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
@@ -795,19 +826,19 @@ bang \;;
 -262144 -4160 1 1;
 #X symbolatom 30 389 10 0 0 0 - #0-defaultpitch -;
 #X obj 25 443 s \$0-defaultpitchlabel;
-#X obj 4 -18 cnv 15 450 60 empty \$0-defaultpitchlabel Do_sustenido[3]
-0 30 0 50 -66577 -257985 0;
+#X obj 4 -18 cnv 15 450 60 empty \$0-defaultpitchlabel Mi-6 0 30 0
+50 -66577 -257985 0;
 #X msg 28 413 label \$1;
 #X obj 244 428 s \$0-pshift;
 #X floatatom 190 443 5 0 0 0 - - -;
 #X obj 210 393 hradio 12 1 0 24 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 13;
 #X obj 194 420 - 12;
 #X obj 603 499 random 24;
 #X obj 604 478 r \$0-play;
 #X obj 100 99 cnv 15 800 150 empty \$0-cnvtable empty 20 12 0 14 -128992
 -1 0;
-#X obj 750 100 cnv 15 149 148 empty \$0-selectarea 7 2 -8 0 50 -261963
+#X obj 100 100 cnv 15 142 148 empty \$0-selectarea 0 2 -8 0 50 -261963
 -148500 0;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array \$0-L 81955 float 2;
@@ -825,35 +856,35 @@ bang \;;
 0;
 #X floatatom 978 113 2 -1 5 2 - #0-rootR #0-rootS;
 #X obj 106 117 vsl 15 40 0 127 0 0 \$0-nota0S \$0-nota0R empty 0 -9
-0 10 -262144 -262144 -262144 200 1;
+0 10 -262144 -262144 -262144 0 1;
 #X obj 123 117 vsl 15 40 0 127 0 0 \$0-nota2S \$0-nota2R empty 0 -9
-0 10 -262144 -262144 -262144 400 1;
+0 10 -262144 -262144 -262144 0 1;
 #X obj 140 117 vsl 15 40 0 127 0 0 \$0-nota4S \$0-nota4R empty 0 -9
 0 10 -262144 -262144 -262144 0 1;
 #X obj 157 117 vsl 15 40 0 127 0 0 \$0-nota5S \$0-nota5R empty 0 -9
-0 10 -262144 -262144 -262144 300 1;
+0 10 -262144 -262144 -262144 0 1;
 #X obj 174 117 vsl 15 40 0 127 0 0 \$0-nota7S \$0-nota7R empty 0 -9
-0 10 -262144 -262144 -262144 100 1;
+0 10 -262144 -262144 -262144 0 1;
 #X obj 191 117 vsl 15 40 0 127 0 0 \$0-nota9S \$0-nota9R empty 0 -9
 0 10 -262144 -262144 -262144 0 1;
 #X obj 208 117 vsl 15 40 0 127 0 0 \$0-nota11S \$0-nota11R empty 0
 -9 0 10 -262144 -262144 -262144 0 1;
 #X obj 225 117 vsl 15 40 0 127 0 0 \$0-nota12S \$0-nota12R empty 0
--9 0 10 -262144 -262144 -262144 400 1;
+-9 0 10 -262144 -262144 -262144 0 1;
 #X obj 242 117 vsl 15 40 0 127 0 0 \$0-nota14S \$0-nota14R empty 0
--9 0 10 -262144 -262144 -262144 200 1;
+-9 0 10 -262144 -262144 -262144 0 1;
 #X obj 259 117 vsl 15 40 0 127 0 0 \$0-nota16S \$0-nota16R empty 0
 -9 0 10 -262144 -262144 -262144 0 1;
 #X obj 276 117 vsl 15 40 0 127 0 0 \$0-nota17S \$0-nota17R empty 0
--9 0 10 -262144 -262144 -262144 100 1;
+-9 0 10 -262144 -262144 -262144 0 1;
 #X obj 293 117 vsl 15 40 0 127 0 0 \$0-nota19S \$0-nota19R empty 0
--9 0 10 -262144 -262144 -262144 100 1;
+-9 0 10 -262144 -262144 -262144 0 1;
 #X obj 310 117 vsl 15 40 0 127 0 0 \$0-nota21S \$0-nota21R empty 0
 -9 0 10 -262144 -262144 -262144 0 1;
 #X obj 327 117 vsl 15 40 0 127 0 0 \$0-nota23S \$0-nota23R empty 0
--9 0 10 -262144 -262144 -262144 100 1;
+-9 0 10 -262144 -262144 -262144 0 1;
 #X obj 344 117 vsl 15 40 0 127 0 0 \$0-nota24S \$0-nota24R empty 0
--9 0 10 -262144 -262144 -262144 100 1;
+-9 0 10 -262144 -262144 -262144 0 1;
 #X obj 361 117 vsl 15 40 0 127 0 0 \$0-nota26S \$0-nota26R empty 0
 -9 0 10 -262144 -262144 -262144 0 1;
 #X obj 378 117 vsl 15 40 0 127 0 0 \$0-nota28S \$0-nota28R empty 0
@@ -861,7 +892,7 @@ bang \;;
 #X obj 395 117 vsl 15 40 0 127 0 0 \$0-nota29S \$0-nota29R empty 0
 -9 0 10 -262144 -262144 -262144 0 1;
 #X obj 412 117 vsl 15 40 0 127 0 0 \$0-nota31S \$0-nota31R empty 0
--9 0 10 -262144 -262144 -262144 100 1;
+-9 0 10 -262144 -262144 -262144 0 1;
 #X obj 429 117 vsl 15 40 0 127 0 0 \$0-nota33S \$0-nota33R empty 0
 -9 0 10 -262144 -262144 -262144 0 1;
 #X obj 446 117 vsl 15 40 0 127 0 0 \$0-nota35S \$0-nota35R empty 0
@@ -879,7 +910,7 @@ bang \;;
 #X obj 548 117 vsl 15 40 0 127 0 0 \$0-nota45S \$0-nota45R empty 0
 -9 0 10 -262144 -262144 -262144 0 1;
 #X obj 565 117 vsl 15 40 0 127 0 0 \$0-nota47S \$0-nota47R empty 0
--9 0 10 -262144 -262144 -262144 100 1;
+-9 0 10 -262144 -262144 -262144 0 1;
 #X obj 582 117 vsl 15 40 0 127 0 0 \$0-nota48S \$0-nota48R empty 0
 -9 0 10 -262144 -262144 -262144 0 1;
 #X obj 599 117 vsl 15 40 0 127 0 0 \$0-nota50S \$0-nota50R empty 0
@@ -887,35 +918,35 @@ bang \;;
 #X obj 616 117 vsl 15 40 0 127 0 0 \$0-nota52S \$0-nota52R empty 0
 -9 0 10 -262144 -262144 -262144 0 1;
 #X obj 633 117 vsl 15 40 0 127 0 0 \$0-nota53S \$0-nota53R empty 0
--9 0 10 -262144 -262144 -262144 100 1;
+-9 0 10 -262144 -262144 -262144 0 1;
 #X obj 650 117 vsl 15 40 0 127 0 0 \$0-nota55S \$0-nota55R empty 0
 -9 0 10 -262144 -262144 -262144 0 1;
 #X obj 667 117 vsl 15 40 0 127 0 0 \$0-nota57S \$0-nota57R empty 0
 -9 0 10 -262144 -262144 -262144 0 1;
 #X obj 684 117 vsl 15 40 0 127 0 0 \$0-nota59S \$0-nota59R empty 0
--9 0 10 -262144 -262144 -262144 100 1;
+-9 0 10 -262144 -262144 -262144 0 1;
 #X obj 701 117 vsl 15 40 0 127 0 0 \$0-nota60S \$0-nota60R empty 0
--9 0 10 -262144 -262144 -262144 100 1;
+-9 0 10 -262144 -262144 -262144 0 1;
 #X obj 718 117 vsl 15 40 0 127 0 0 \$0-nota62S \$0-nota62R empty 0
--9 0 10 -262144 -262144 -262144 100 1;
+-9 0 10 -262144 -262144 -262144 0 1;
 #X obj 735 117 vsl 15 40 0 127 0 0 \$0-nota64S \$0-nota64R empty 0
 -9 0 10 -262144 -262144 -262144 0 1;
 #X obj 752 117 vsl 15 40 0 127 0 0 \$0-nota65S \$0-nota65R empty 0
--9 0 10 -262144 -262144 -262144 100 1;
+-9 0 10 -262144 -262144 -262144 0 1;
 #X obj 769 117 vsl 15 40 0 127 0 0 \$0-nota67S \$0-nota67R empty 0
--9 0 10 -262144 -262144 -262144 100 1;
+-9 0 10 -262144 -262144 -262144 0 1;
 #X obj 786 117 vsl 15 40 0 127 0 0 \$0-nota69S \$0-nota69R empty 0
 -9 0 10 -262144 -262144 -262144 0 1;
 #X obj 803 117 vsl 15 40 0 127 0 0 \$0-nota71S \$0-nota71R empty 0
 -9 0 10 -262144 -262144 -262144 0 1;
 #X obj 820 117 vsl 15 40 0 127 0 0 \$0-nota72S \$0-nota72R empty 0
--9 0 10 -262144 -262144 -262144 100 1;
+-9 0 10 -262144 -262144 -262144 0 1;
 #X obj 837 117 vsl 15 40 0 127 0 0 \$0-nota74S \$0-nota74R empty 0
 -9 0 10 -262144 -262144 -262144 0 1;
 #X obj 854 117 vsl 15 40 0 127 0 0 \$0-nota76S \$0-nota76R empty 0
--9 0 10 -262144 -262144 -262144 100 1;
+-9 0 10 -262144 -262144 -262144 0 1;
 #X obj 871 117 vsl 15 40 0 127 0 0 \$0-nota77S \$0-nota77R empty 0
--9 0 10 -262144 -262144 -262144 100 1;
+-9 0 10 -262144 -262144 -262144 0 1;
 #X obj 888 117 vsl 15 40 0 127 0 0 \$0-nota79S \$0-nota79R empty 0
 -9 0 10 -262144 -262144 -262144 0 1;
 #X obj 905 117 vsl 15 40 0 127 0 0 \$0-nota81S \$0-nota81R empty 0
@@ -933,7 +964,7 @@ bang \;;
 #X obj 202 106 vsl 13 30 0 127 0 0 \$0-nota10S \$0-nota10R empty 0
 -9 0 10 -1 -1 -1 0 1;
 #X obj 234 106 vsl 13 30 0 127 0 0 \$0-nota13S \$0-nota13R empty 0
--9 0 10 -1 -1 -1 100 1;
+-9 0 10 -1 -1 -1 0 1;
 #X obj 251 106 vsl 13 30 0 127 0 0 \$0-nota15S \$0-nota15R empty 0
 -9 0 10 -1 -1 -1 0 1;
 #X obj 283 106 vsl 13 30 0 127 0 0 \$0-nota18S \$0-nota18R empty 0
@@ -953,7 +984,7 @@ bang \;;
 #X obj 440 107 vsl 13 30 0 127 0 0 \$0-nota34S \$0-nota34R empty 0
 -9 0 10 -1 -1 -1 0 1;
 #X obj 474 107 vsl 13 30 0 127 0 0 \$0-nota37S \$0-nota37R empty 0
--9 0 10 -241291 -241291 -241291 0 1;
+-9 0 10 -1 -1 -1 0 1;
 #X obj 491 107 vsl 13 30 0 127 0 0 \$0-nota39S \$0-nota39R empty 0
 -9 0 10 -1 -1 -1 0 1;
 #X obj 523 106 vsl 13 30 0 127 0 0 \$0-nota42S \$0-nota42R empty 0
@@ -969,7 +1000,7 @@ bang \;;
 #X obj 642 105 vsl 13 30 0 127 0 0 \$0-nota54S \$0-nota54R empty 0
 -9 0 10 -1 -1 -1 0 1;
 #X obj 660 105 vsl 13 30 0 127 0 0 \$0-nota56S \$0-nota56R empty 0
--9 0 10 -1 -1 -1 0 1;
+-9 0 10 -241291 -241291 -241291 0 1;
 #X obj 678 105 vsl 13 30 0 127 0 0 \$0-nota58S \$0-nota58R empty 0
 -9 0 10 -1 -1 -1 0 1;
 #X obj 712 105 vsl 13 30 0 127 0 0 \$0-nota61S \$0-nota61R empty 0
@@ -979,7 +1010,7 @@ bang \;;
 #X obj 761 105 vsl 13 30 0 127 0 0 \$0-nota66S \$0-nota66R empty 0
 -9 0 10 -1 -1 -1 0 1;
 #X obj 779 105 vsl 13 30 0 127 0 0 \$0-nota68S \$0-nota68R empty 0
--9 0 10 -1 -1 -1 100 1;
+-9 0 10 -1 -1 -1 0 1;
 #X obj 797 105 vsl 13 30 0 127 0 0 \$0-nota70S \$0-nota70R empty 0
 -9 0 10 -1 -1 -1 0 1;
 #X obj 831 106 vsl 13 30 0 127 0 0 \$0-nota73S \$0-nota73R empty 0
@@ -2920,6 +2951,25 @@ bang \;;
 #X restore 3 -97 pd piano;
 #X obj 742 -28 cnv 15 200 30 empty \$0-presetcanvas espelho.xml 0 20
 0 20 -191407 -16662 0;
+#X obj 338 365 r \$0-tone;
+#X floatatom 264 367 5 0 0 0 - - -;
+#N canvas 172 81 450 300 netpd 0;
+#X obj 57 166 s \$0-play;
+#X obj 183 75 netreceive 3000;
+#X floatatom 280 98 5 0 0 0 - - -;
+#X obj 236 173 s \$0-tone;
+#X obj 227 143 list-dripslow;
+#X msg 315 136 0 3 4;
+#X obj 225 102 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 1 0 0 0;
+#X connect 1 0 6 0;
+#X connect 1 0 4 0;
+#X connect 1 1 2 0;
+#X connect 4 0 3 0;
+#X connect 4 1 5 0;
+#X connect 5 0 4 1;
+#X restore 531 45 pd netpd;
 #X connect 27 0 26 0;
 #X connect 29 0 32 0;
 #X connect 32 0 30 0;
@@ -2928,3 +2978,5 @@ bang \;;
 #X connect 36 0 34 0;
 #X connect 38 0 37 0;
 #X connect 43 0 35 0;
+#X connect 46 0 47 0;
+#X connect 47 0 33 0;
