@@ -1,0 +1,35 @@
+#N canvas 0 26 779 493 24;
+#X obj 70 59 seq;
+#X msg 181 85 read \$1;
+#X obj 182 46 openpanel;
+#X obj 323 31 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 188 121 read /home/glerm/midi/mikro113.mid;
+#X obj 545 79 midiformat;
+#X msg 46 -56 bang;
+#X msg 73 -10 stop;
+#X obj 51 -75 bng 15 250 50 0 empty empty empty 0 -6 0 10 -262144 -1
+-1;
+#X msg 148 -29 pause;
+#X msg 243 -31 continue;
+#X text 107 -83 loop;
+#X text 187 -79 play;
+#X obj 11 269 ezdac~;
+#X obj -1 162 moses 60;
+#X obj 365 72 mtof;
+#X floatatom 402 -64 5 0 0 0 - - -;
+#X obj 520 -67 syn-xfm;
+#X msg 238 224 record;
+#X msg 241 261 stop record;
+#X msg 235 179 write /home/glerm/midi/mikro113.mid;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 4 0 0 0;
+#X connect 6 0 0 0;
+#X connect 7 0 0 0;
+#X connect 8 0 6 0;
+#X connect 9 0 0 0;
+#X connect 10 0 0 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
