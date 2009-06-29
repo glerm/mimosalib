@@ -1,0 +1,16 @@
+#N canvas 0 26 800 493 16;
+#X obj 98 48 mimosa-nbxcol;
+#X msg 321 342 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X obj 140 431 prepend set;
+#X obj 83 10 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X msg 320 195 0 0 76 33 0 0 0 0 0 125 0 0 0 81 0 0;
+#X obj 227 22 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 252 87 68 50 38 56 72 37 54 76 61 51 99 130 41 55 84 27;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 0 1;
+#X connect 4 0 0 0;
+#X connect 5 0 0 2;
+#X connect 6 0 0 0;

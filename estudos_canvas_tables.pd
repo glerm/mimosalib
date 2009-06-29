@@ -1,0 +1,40 @@
+#N canvas 0 26 800 493 24;
+#X obj 115 126 tablesampler;
+#X obj 128 289 ezdac~;
+#X obj 228 53 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 308 61 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 399 363 s timeline;
+#X msg 384 287 color \$1;
+#X floatatom 392 226 5 0 0 0 - - -;
+#X msg 530 293 vis_size \$1 \$2;
+#X obj 547 238 pack f f;
+#X obj 591 210 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 623 164 5 0 0 0 - - -;
+#X floatatom 536 155 5 0 0 0 - - -;
+#X obj 496 43 pack f f;
+#X obj 540 15 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 572 -31 5 0 0 0 - - -;
+#X floatatom 485 -40 5 0 0 0 - - -;
+#X msg 479 98 pos \$1 \$2;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 2 0 0 0;
+#X connect 3 0 0 1;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 4 0;
+#X connect 8 0 7 0;
+#X connect 9 0 8 0;
+#X connect 10 0 8 1;
+#X connect 10 0 9 0;
+#X connect 11 0 8 0;
+#X connect 12 0 16 0;
+#X connect 13 0 12 0;
+#X connect 14 0 12 1;
+#X connect 14 0 13 0;
+#X connect 15 0 12 0;
+#X connect 16 0 4 0;

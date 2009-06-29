@@ -1,0 +1,106 @@
+#N canvas 0 0 779 472 10;
+#X obj 135 174 mimosa-nbxcol;
+#X obj 135 121 == 0;
+#X obj 207 120 == 1;
+#X obj 279 118 == 2;
+#X obj 351 119 == 3;
+#X obj 423 118 == 4;
+#X obj 495 119 == 5;
+#X obj 567 118 == 6;
+#X obj 639 119 == 7;
+#X msg 198 24 bang;
+#X obj 356 -23 tgl 40 0 empty empty empty 17 7 0 10 -146369 -86853
+-1 0 1;
+#X text 199 5 zero all;
+#X obj 438 1 hsl 128 10 100 1000 1 0 empty empty empty -2 -8 0 10 -203904
+-4160 -1 0 1;
+#X obj 580 47 count;
+#X floatatom 439 21 5 0 0 0 - - -;
+#N canvas 116 136 450 300 metrocount 0;
+#X obj 48 55 metro 250;
+#X obj 66 5 inlet;
+#X obj 107 226 outlet;
+#X obj 127 6 inlet;
+#X obj 73 154 f 0;
+#X obj 73 175 + 1;
+#X msg 85 118 0;
+#X obj 54 76 route reset;
+#X msg 23 119 bang;
+#X obj 73 199 - 1;
+#X obj 109 154 mod 8;
+#X connect 0 0 7 0;
+#X connect 1 0 0 0;
+#X connect 3 0 0 1;
+#X connect 4 0 5 0;
+#X connect 5 0 9 0;
+#X connect 5 0 10 0;
+#X connect 6 0 4 1;
+#X connect 7 0 6 0;
+#X connect 7 1 8 0;
+#X connect 8 0 4 0;
+#X connect 9 0 2 0;
+#X connect 10 0 4 1;
+#X restore 355 21 pd metrocount;
+#X obj 207 174 mimosa-nbxcol;
+#X obj 351 174 mimosa-nbxcol;
+#X obj 279 174 mimosa-nbxcol;
+#X obj 495 174 mimosa-nbxcol;
+#X obj 423 174 mimosa-nbxcol;
+#X obj 639 174 mimosa-nbxcol;
+#X obj 567 174 mimosa-nbxcol;
+#X obj 182 148 bng 15 250 50 0 empty \$0-ZERO empty 17 7 0 10 -262144
+-1 -1;
+#X obj 256 148 bng 15 250 50 0 empty \$0-ZERO empty 17 7 0 10 -262144
+-1 -1;
+#X obj 329 149 bng 15 250 50 0 empty \$0-ZERO empty 17 7 0 10 -262144
+-1 -1;
+#X obj 403 149 bng 15 250 50 0 empty \$0-ZERO empty 17 7 0 10 -262144
+-1 -1;
+#X obj 465 146 bng 15 250 50 0 empty \$0-ZERO empty 17 7 0 10 -262144
+-1 -1;
+#X obj 539 146 bng 15 250 50 0 empty \$0-ZERO empty 17 7 0 10 -262144
+-1 -1;
+#X obj 612 147 bng 15 250 50 0 empty \$0-ZERO empty 17 7 0 10 -262144
+-1 -1;
+#X obj 686 147 bng 15 250 50 0 empty \$0-ZERO empty 17 7 0 10 -262144
+-1 -1;
+#X obj 191 52 s \$0-ZERO;
+#X obj 196 -16 sel 0;
+#X msg 733 147 print;
+#X obj 733 173 h_map \$0-nbxmtx;
+#X msg 678 30 saveXML /home/glerm/artesanatodevolts/matriz.xml;
+#X msg 688 51 readXML /home/glerm/artesanatodevolts/matriz.xml;
+#X obj 738 246 coll;
+#C restore;
+#X connect 1 0 0 0;
+#X connect 2 0 16 0;
+#X connect 3 0 18 0;
+#X connect 4 0 17 0;
+#X connect 5 0 20 0;
+#X connect 6 0 19 0;
+#X connect 7 0 22 0;
+#X connect 8 0 21 0;
+#X connect 9 0 31 0;
+#X connect 10 0 15 0;
+#X connect 12 0 15 1;
+#X connect 12 0 14 0;
+#X connect 15 0 1 0;
+#X connect 15 0 2 0;
+#X connect 15 0 3 0;
+#X connect 15 0 4 0;
+#X connect 15 0 5 0;
+#X connect 15 0 6 0;
+#X connect 15 0 7 0;
+#X connect 15 0 8 0;
+#X connect 23 0 0 1;
+#X connect 24 0 16 1;
+#X connect 25 0 18 1;
+#X connect 26 0 17 1;
+#X connect 27 0 20 1;
+#X connect 28 0 19 1;
+#X connect 29 0 22 1;
+#X connect 30 0 21 1;
+#X connect 32 0 9 0;
+#X connect 33 0 34 0;
+#X connect 35 0 34 0;
+#X connect 36 0 34 0;
