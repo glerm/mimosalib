@@ -1,0 +1,18 @@
+reset bang;
+filename /home/glerm/samples/espelhoriff.wav;
+end 0 0.177722;
+end 1 0.371715;
+end 2 0.468085;
+end 3 0.525657;
+end 4 0.645807;
+end 5 0.772215;
+end 6 0.813517;
+end 7 1;
+start 1 0.176471;
+start 2 0.371715;
+start 3 0.441802;
+start 4 0.546934;
+start 5 0.645807;
+start 6 0.743429;
+start 7 0.813517;
+done bang;

@@ -1,0 +1,18 @@
+reset bang;
+filename /home/glerm/samples/y1.wav;
+end 0 0.14393;
+end 1 0.252816;
+end 2 0.376721;
+end 3 0.529412;
+end 4 0.683354;
+end 5 0.808511;
+end 6 0.868586;
+end 7 1;
+start 1 0.141427;
+start 2 0.254068;
+start 3 0.372966;
+start 4 0.530663;
+start 5 0.665832;
+start 6 0.797247;
+start 7 0.862328;
+done bang;

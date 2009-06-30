@@ -1,0 +1,18 @@
+reset bang;
+filename /home/glerm/samples/siri.wav;
+end 0 0.16771;
+end 1 0.300375;
+end 2 0.39174;
+end 3 0.483104;
+end 4 0.594493;
+end 5 0.75219;
+end 6 0.868586;
+end 7 1;
+start 1 0.170213;
+start 2 0.301627;
+start 3 0.394243;
+start 4 0.469337;
+start 5 0.594493;
+start 6 0.753442;
+start 7 0.871089;
+done bang;
