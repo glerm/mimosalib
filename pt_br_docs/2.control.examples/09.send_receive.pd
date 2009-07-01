@@ -1,0 +1,36 @@
+#N canvas 432 187 746 487 12;
+#X floatatom 88 204 0 0 0 0 - - -;
+#X floatatom 248 204 0 0 0 0 - - -;
+#X floatatom 392 203 0 0 0 0 - - -;
+#X floatatom 88 113 0 0 0 0 - - -;
+#X floatatom 250 112 0 0 0 0 - - -;
+#X floatatom 389 111 0 0 0 0 - - -;
+#X text 459 447 updated for Pd version 0.34;
+#X obj 88 140 send biscoito;
+#X obj 88 176 receive biscoito;
+#X obj 251 139 send frutas;
+#X obj 388 138 send frutas;
+#X obj 248 177 receive frutas;
+#X obj 391 176 receive frutas;
+#X msg 51 306 \; frutas 99 \; biscoito 56;
+#X obj 407 380 s frutas;
+#X obj 406 406 r frutas;
+#X text 48 244 voce pode usar a funcionalidade do ponto-e-virgula das
+caixas de mensagens para enderecar "receive"s tambem. E' util se quiser
+fazer uma lista inteira de coisas:;
+#X text 168 305 Essa transacao acontece em tempo zero -- Se voce tentar
+usar o objeto "timer" pra medir o tempo entre os dois \, voce receberia
+zero.;
+#X text 128 383 "send" e "receive" tambem podem ser abreviados:;
+#X text 51 4 Os objetos "send" e "receive" permitem conexoes indiretas.
+Eles funcionam de forma global - voce pode usa-los para fazer 2 patches
+diferentes comunicarem entre si. Qualquer mensagem que um "send" recebe
+\, aparece na saida de todos os "receive"s que tiverem o mesmo nome.
+Podem existir qualquer numero de "send"s e "receive"s com o mesmo nome:
+;
+#X connect 3 0 7 0;
+#X connect 4 0 9 0;
+#X connect 5 0 10 0;
+#X connect 8 0 0 0;
+#X connect 11 0 1 0;
+#X connect 12 0 2 0;

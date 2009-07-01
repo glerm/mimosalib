@@ -1,0 +1,20 @@
+#N canvas 171 73 726 291 12;
+#X obj 34 60 inlet;
+#X obj 34 88 float \$1;
+#X obj 34 116 send \$2;
+#X text 461 260 updated for Pd version 0.26;
+#X text 156 31 Essa janela e' usada pelo 11.subpatch.pd para demonstrar
+o mecanismo de abstracao do pd. Se voce abriu essa janela separadamente
+\, voce pode tambem querer abrir a outra para ver como ela e' usada.
+;
+#X text 155 103 Quando voce chama uma abstracao digitando \, por exemplo
+\, "sendnumber 1 x" numa caixa de objeto \, a abstracao pode acessar
+os valores dos argumentos de criacao (1 e x) na forma de \$1 e \$2
+em suas caixas de objeto. Digitar \$1 em uma caixa de mensagem tem
+um significado diferente.;
+#X text 152 183 Neste caso \$1 e' um numero que voce pode especificar
+e \$2 e' o destino para o "send".;
+#X text 26 225 Por razoes obvias voce nao deve querer usar uma abstracao
+dentro dela mesma.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;

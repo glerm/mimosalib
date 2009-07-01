@@ -1,0 +1,39 @@
+#N canvas 626 1 580 652 12;
+#X msg 195 36 hello world;
+#X obj 195 72 print;
+#X floatatom 304 36 0 0 0 0 - - -;
+#X text 194 15 message;
+#X text 304 14 atom;
+#X text 255 73 object;
+#X text 328 607 updated for Pd version 0.33;
+#X text 32 373 Voce pode criar novos objetos duplicando os existentes
+\, atraves da opcao "duplicate" no menu. Voce pode tambem recortar
+e colar (cut & paste). Se voce duplicar varios objetos conectados \,
+as conexoes serao replicadas tambem.;
+#X text 35 552 O menu "put" cria novos itens de texto de qualquer um
+dos 4 tipos. Voce tambem pode colocar uma caixa "symbol" \, analoga
+a uma caixa de numero mas para mostrar e entrar strings de texto.;
+#X text 34 102 Quando voce abre um documento PD como este \, seu cursor
+sera uma seta. Selecione "edit mode" no menu Edit e o cursor vai mudar
+para a imagem de uma mao. O patch esta agora em "modo de edicao". Voce
+pode mover qualquer objeto apenas arrastando \, e posiciona-lo no patch.
+;
+#X text 33 185 Selecione "Edit Mode" novamente no menu Edit e voce
+volta para o cursor de seta \, que age nos objetos sem move-los. Como
+um atalho para essa opcao use a combinacao CTRL-E.;
+#X text 33 237 No modo de edicao \, se voce clica em uma mensagem \,
+objeto \, ou comentario \, voce pode entao redigitar o texto. Para
+objetos isso vai criar um novo objeto e deletar o velho. PD vai tentar
+reconectar o novo objeto aos outros da mesma forma que estava o antigo.
+;
+#X text 32 319 Quando voce terminar de alterar o conteudo de uma caixa
+\, clique fora da caixa para desseleciona-la. Isso diz ao PD para incorporar
+o novo texto digitado.;
+#X text 34 442 Modo de edicao deixa tambem que voce faca e quebre as
+conexoes entre os objetos. Coloque o cursor "mao" sobre uma linha conectando
+dois objetos. Ela se transforma em um X. Clique na conexao para selecona-la.
+Pressione Delete para quebrar a conexao. Ponha o cursor sobre uma saida
+e ele vira um circulo. Clique e arraste para outro objeto para criar
+uma conexao.;
+#X connect 0 0 1 0;
+#X connect 2 0 1 0;

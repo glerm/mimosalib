@@ -1,0 +1,158 @@
+#N canvas 80 10 736 726 12;
+#X obj 27 220 r trigger;
+#X floatatom 65 581 0 0 0;
+#N canvas 159 26 531 288 output 0;
+#X obj 351 166 t b;
+#X obj 351 114 f;
+#X obj 351 62 inlet;
+#X text 358 30 mute;
+#X obj 351 192 f;
+#X msg 442 185 0;
+#X msg 351 88 bang;
+#X obj 351 140 moses 1;
+#X obj 413 122 moses 1;
+#X obj 86 154 dbtorms;
+#X obj 413 96 r master-lvl;
+#X obj 86 44 r master-lvl;
+#X obj 351 218 s master-lvl;
+#X obj 24 163 inlet~;
+#X obj 207 42 inlet;
+#X text 207 19 level;
+#X obj 207 104 s master-lvl;
+#X msg 100 67 set \$1;
+#X obj 100 93 outlet;
+#X msg 222 66 \; pd dsp 1;
+#X obj 86 202 line~;
+#X obj 23 221 *~;
+#X obj 23 250 dac~;
+#X obj 86 178 pack 0 50;
+#X text 22 140 audio;
+#X obj 442 159 t b;
+#X obj 21 191 hip~ 1;
+#X connect 0 0 4 0;
+#X connect 1 0 7 0;
+#X connect 2 0 6 0;
+#X connect 4 0 12 0;
+#X connect 5 0 12 0;
+#X connect 6 0 1 0;
+#X connect 7 0 0 0;
+#X connect 7 1 25 0;
+#X connect 8 1 4 1;
+#X connect 9 0 23 0;
+#X connect 10 0 1 1;
+#X connect 10 0 8 0;
+#X connect 11 0 9 0;
+#X connect 11 0 17 0;
+#X connect 13 0 26 0;
+#X connect 14 0 16 0;
+#X connect 14 0 19 0;
+#X connect 17 0 18 0;
+#X connect 20 0 21 1;
+#X connect 21 0 22 0;
+#X connect 21 0 22 1;
+#X connect 23 0 20 0;
+#X connect 25 0 5 0;
+#X connect 26 0 21 0;
+#X restore 26 610 pd output;
+#X msg 102 581 MUTE;
+#X obj 27 446 *~;
+#X obj 27 474 *~;
+#X floatatom 62 277 3 0 100;
+#X msg 484 482 \; trigger 0;
+#X obj 27 246 unpack;
+#X floatatom 27 277 1 0 100;
+#X text 463 668 updated for Pd version 0.34;
+#X obj 26 525 +~ 0.3;
+#X obj 26 551 cos~;
+#X obj 26 499 osc~;
+#X text 88 9 PORTAMENTO AND VIBRATO;
+#X obj 62 300 mtof;
+#X obj 62 325 sqrt;
+#X obj 62 350 sqrt;
+#X text 619 402 <-- midC;
+#X text 607 444 <-- octave up;
+#X msg 484 388 \; trigger 1 60;
+#X msg 483 435 \; trigger 1 72;
+#X text 584 488 <-- release;
+#X text 590 506 is optional;
+#X obj 27 416 *~;
+#X obj 236 396 +~ 1;
+#X graph graph1 0 -1 130 1 433 643 633 543;
+#X array array62 131 float 1;
+#A 0 0.970031 1 0.970031 0.881921 0.740952 0.555571 0.336891 0.0980184
+-0.146729 -0.382682 -0.595698 -0.773009 -0.88 -0.9 -0.92 -0.92 -0.85773
+-0.707109 -0.514106 -0.290288 -0.0490716 0.195086 0.427551 0.63439
+0.803205 0.86 0.88 0.88 0.88 0.84 0.82 0.471402 0.242986 6.63397e-06
+-0.242974 -0.471391 -0.671554 -0.831465 -0.941541 -0.995184 -0.989178
+-0.923883 -0.803213 -0.68 -0.42 -0.24 0.1 0.4 0.6 0.7071 0.857723 0.956937
+0.998795 0.980787 0.903994 0.773018 0.595708 0.382694 0.146742 -0.0980052
+-0.336878 -0.55556 -0.7 -0.8 -0.88 -0.88 -0.88 -0.84 -0.82 -0.555582
+-0.336903 -0.0980316 0.146716 0.38267 0.595687 0.773001 0.903983 0.980782
+0.998796 0.956945 0.857737 0.707119 0.514117 0.290301 0.0490849 -0.195073
+-0.427539 -0.63438 -0.803197 -0.923873 -0.989174 -0.995187 -0.94155
+-0.83148 -0.671573 -0.471414 -0.242999 -1.99019e-05 0.242961 0.471379
+0.671544 0.831458 0.88 0.9 0.9 0.88 0.803221 0.63441 0.08 -0.14 -0.28
+-0.48 -0.64 -0.72 -0.857717 -0.956933 -0.998794 -0.98079 -0.904 -0.773026
+-0.595719 -0.382706 -0.146755 0.097992 0.336866 0.555549 0.740934 0.881909
+0.970025 1 0.970038;
+#X pop;
+#X obj 236 342 tabosc4~ array62;
+#X floatatom 236 286 3 0 0;
+#X obj 236 313 / 6;
+#X obj 236 370 *~;
+#X floatatom 390 323 3 0 0;
+#X text 235 421 since we'll multiply \,;
+#X text 234 436 vibrato output should;
+#X text 234 453 be centered at 1 \, not 0;
+#X text 275 372 multiply by vib depth;
+#X obj 390 350 / 6923;
+#X text 28 35 Portamento can be treated as a special case of an ADSR
+envelope \, with 100 percent sustain. Vibrato is properly computed
+in units of pitch \, but it's also easy to add vibrato to the envelope--before
+raising it to the fourth power \, so that it acts pseudo-logarithmically.
+Rather than add to the ADSR output \, we multiply a signal which controls
+relative frequency. The relative frequency change is one plus an oscillator.
+;
+#X text 61 417 apply vibrato;
+#X text 65 445 fourth;
+#X text 68 461 power;
+#X text 96 529 waveform;
+#X text 95 509 simple;
+#X text 465 344 4/(exp(log(2)/1200)-1);
+#X text 469 325 conversion factor is;
+#X text 383 279 vibrato depth;
+#X text 382 296 in cents;
+#X text 233 245 vibrato speed;
+#X text 232 262 in Hertz;
+#X text 152 168 I made a table with 6 cycles of vibrato and made small
+changes with the mouse to get a not-exactly-repeating vibrato \, and
+thus have to divide vibrato frequency by 6 You can just use a sine
+or triangle wave if you prefer.;
+#X obj 27 375 adsr 0 100 200 100 300;
+#X connect 0 0 8 0;
+#X connect 1 0 2 1;
+#X connect 2 0 1 0;
+#X connect 3 0 2 2;
+#X connect 4 0 5 0;
+#X connect 4 0 5 1;
+#X connect 5 0 13 0;
+#X connect 6 0 15 0;
+#X connect 8 0 9 0;
+#X connect 8 1 6 0;
+#X connect 9 0 50 0;
+#X connect 11 0 12 0;
+#X connect 12 0 2 0;
+#X connect 13 0 11 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 17 0 50 1;
+#X connect 24 0 4 0;
+#X connect 24 0 4 1;
+#X connect 25 0 24 1;
+#X connect 27 0 30 0;
+#X connect 28 0 29 0;
+#X connect 29 0 27 0;
+#X connect 30 0 25 0;
+#X connect 31 0 36 0;
+#X connect 36 0 30 1;
+#X connect 50 0 24 0;

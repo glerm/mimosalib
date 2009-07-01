@@ -1,0 +1,29 @@
+#N canvas 47 52 762 486 12;
+#X text 465 442 updated for Pd version 0.26;
+#X obj 205 129 qlist;
+#X floatatom 345 170 0 0 0 0 - - -;
+#X floatatom 441 171 0 0 0 0 - - -;
+#X text 39 27 Voce pode usar os objetos "qlist" ou "textfile" para
+sequencias. "qlist" e' mais simples de usar do que o "textfile" que
+por sua vez e' mais versatil.;
+#X obj 344 144 r recebe1;
+#X obj 442 145 r recebe2;
+#X msg 206 87 clear \, add recebe1 1 \, add 1000 recebe1 0 \, add recebe2
+2 \, add 1000 recebe2 0 \, add recebe1 3 \, bang;
+#X text 48 202 As mensagens "add" colocam linhas na qlist \, de forma
+que ela passa a conter:;
+#X text 155 238 recebe1 1;
+#X text 155 259 1000 recebe1 0;
+#X text 153 278 recebe2 2;
+#X text 153 299 1000 recebe2 0;
+#X text 155 317 recebe1 3;
+#X text 22 339 e o "bang" final faz o qlist executar a sequencia mandando
+as mensagens para objetos "receive". Mensagens iniciando com numeros
+implicam numa espera em milisegundos.;
+#X text 16 391 Se voce tem mais de 5 linhas voce provavelmente vai
+querer armazena-las como um arquivo separado e fazer o qlist le-lo.
+Voce pode tambem gravar arquivos \, configurar o tempo \, e ir passo
+a passo. Veja a ajuda do objeto para detalhes.;
+#X connect 5 0 2 0;
+#X connect 6 0 3 0;
+#X connect 7 0 1 0;

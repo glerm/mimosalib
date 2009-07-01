@@ -1,0 +1,76 @@
+#N canvas 128 33 652 627 12;
+#X msg 29 318 bang;
+#X floatatom 432 341 0 0 0 0 - - -;
+#X floatatom 135 158 0 0 0 0 - - -;
+#X floatatom 256 158 0 0 0 0 - - -;
+#X floatatom 135 213 0 0 0 0 - - -;
+#X msg 226 314 bang;
+#X floatatom 519 341 0 0 0 0 - - -;
+#X text 332 594 updated for Pd version 0.34;
+#X text 32 14 Voce pode aninhar janelas inteiras dentro de objetos
+do pd (e janelas dentro de janelas \, ate a profundidade que quiser).
+Tem dois jeitos de fazer. A primeira e' somente para criar uma subjanela
+\, digite:;
+#X text 201 85 <-- voce pode passar o nome da janela como parametro
+;
+#X text 31 107 Se voce clicar na janela (em modo de execucao) a subjanela
+aparece. Clique nesta abaixo para ver como fazemos as entradas e saidas
+da subjanela:;
+#N canvas 344 151 430 127 subjanela-exemplo 0;
+#X text 38 43 Esta e' uma subjanela da janela principal;
+#X restore 29 85 pd subjanela-exemplo;
+#N canvas 0 0 658 344 somador-faminto 0;
+#X obj 62 73 inlet;
+#X obj 118 73 inlet;
+#X obj 62 188 outlet;
+#X obj 118 101 t b f;
+#X obj 62 156 +;
+#X text 195 15 Esta e' uma subjanela que mantem a soma de duas entradas
+\, fazendo a soma se qualquer uma das duas mudarem. Se for a entrada
+esquerda \, o objeto + faz a soma automaticamente \; caso seja a entrada
+da direita \, o objeto trigger passa o valor para o objeto + \, e entao
+"bang"a a entrada da esquerda para forcar o + a calcular.;
+#X text 196 117 Por causa das duas "inlet" e um "outlet" \, a caixa
+que contem essa janela (na janela pai) vai ter duas entradas e uma
+saida. Elas respeitam a ordem "esquerda-pra-direita" dos objetos "inlet"
+e "outlet" na subjanela.;
+#X text 56 231 PS: Isso mostra o motivo que leva objetos como "+" a
+somente calcular quando recebem valores em sua entrada da esquerda.
+E' facil fazer ambas as entradas executarem o calculo usando um trigger
+\, mas se as duas entradas do "+" fossem "quentes" nao ia ter jeito
+de mudar ambos valores sem somar duas vezes.;
+#X connect 0 0 4 0;
+#X connect 1 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 1 4 1;
+#X connect 4 0 2 0;
+#X restore 135 185 pd somador-faminto;
+#X text 26 235 Existe tambem uma forma para fazer varias copias de
+um patch que herdem quaisquer mudancas que voce faca no original. Os
+subpatches dessa forma sao chamados de "abstracoes". Por exemplo \,
+aqui esta uma simples abstracao que manda um numero para um "receive"
+quando comandado:;
+#X obj 30 342 sendnumber 45 biscoito;
+#X obj 432 314 r biscoito;
+#X obj 519 314 r frutas;
+#X text 27 364 Tem um arquivo separado neste mesmo diretorio chamado
+"sendnumber.pd" que e' carregado toda vez que criamos um objeto com
+o nome de "sendnumber". Clique numa caixa 'sendnumber' acima para ve-lo.
+Voce pode modificar o subpatch e salva-lo \, as mudancas vao ser salvas
+de volta para o arquivo sendnumber.pd e nao como parte deste patch
+que contem o objeto.;
+#X text 29 478 Se voce mudar uma copia de uma abstracao \, a mudanca
+nao e' feita automaticamente nas outras copias. Voce tem que mudar
+\, salvar o subpatch e forcar a recarga dos outros objetos \, talvez
+fechando e reabrindo o patch que os contem.;
+#X text 32 548 note que \$1 \, etc \, tem um significado diferente
+em caixas de objeto (abra uma das abstracoes "sendnumber" para exemplos
+e comentarios).;
+#X obj 226 341 sendnumber 67 frutas;
+#X connect 0 0 14 0;
+#X connect 2 0 12 0;
+#X connect 3 0 12 1;
+#X connect 5 0 20 0;
+#X connect 12 0 4 0;
+#X connect 15 0 1 0;
+#X connect 16 0 6 0;

@@ -1,0 +1,30 @@
+#N canvas 177 118 639 490 12;
+#X obj 32 27 osc~ 440;
+#X obj 54 55 osc~ 550;
+#X obj 54 116 osc~ 660;
+#X obj 32 88 +~;
+#X obj 32 142 +~;
+#X obj 32 173 output~;
+#X text 383 463 updated for Pd version 0.36;
+#X text 261 20 CONTROLANDO AMPLITUDE DE SAIDA;
+#X text 143 115 <-- Aqui nos fazemos uma triade de la' maior como um
+sinal de teste.;
+#X text 108 177 <-- esta e' uma subjanela. Clique com o botao direito
+e escolha "Abrir" (open) para ver dentro.;
+#X text 31 250 Neste patch e nos subsequentes \, vamos usar uma subjanela
+\, "output" para controlar a amplitude geral. As amplitudes sao em
+decibels com 100 sendo a onda total. Neste exemplo \, voce nao pode
+colocar a saida depois de 90 ou mais sem clip. Voce vai saber que esta
+cortando frequencia se \, ao inves de um la' maior \, comecar a ouvir
+um tom distorcido duas outavas abaixo. O corte acontece no ultimo estagio
+de saida do audio do Pd. Sinais de audio internos ao Pd nao tem nenhum
+limite de amplitude.;
+#X text 30 401 O controle de saida inicia o DSP automaticamente assim
+que voce toca o controle de som. Apertar "mudo" troca entre o nivel
+atual e o nivel zero.;
+#X connect 0 0 3 0;
+#X connect 1 0 3 1;
+#X connect 2 0 4 1;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 0 5 1;

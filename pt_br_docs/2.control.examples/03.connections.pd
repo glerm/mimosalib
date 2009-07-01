@@ -1,0 +1,60 @@
+#N canvas 585 112 664 556 12;
+#X floatatom 76 400 0 0 0 0 - - -;
+#X floatatom 189 401 0 0 0 0 - - -;
+#X floatatom 76 307 0 0 0 0 - - -;
+#X floatatom 553 161 0 0 0 0 - - -;
+#X floatatom 599 162 0 0 0 0 - - -;
+#X obj 553 135 +;
+#X floatatom 553 105 0 0 0 0 - - -;
+#X obj 599 136 +;
+#X floatatom 42 104 0 0 0 0 - - -;
+#X floatatom 42 12 0 0 0 0 - - -;
+#X floatatom 64 36 0 0 0 0 - - -;
+#X obj 42 80 +;
+#X obj 76 376 *;
+#X obj 189 377 -;
+#X obj 76 330 trigger float float;
+#X text 412 526 updated for Pd version 0.33;
+#X text 0 61 quente;
+#X text 187 107 Aqui esta o problema. Arraste isto --->;
+#X text 549 182 bom;
+#X text 600 181 ruim;
+#X text 3 403 quadrado;
+#X text 228 402 primeira diferenca;
+#X text 116 14 No PD \, a maioria dos objetos executa suas funcoes
+quando eles recebem mensagens na suas entradas da esquerda \, e as
+outras entradas sao para armazenar valores que podem modificar a proxima
+acao. No exemplo a esquerda \, o objeto + faz seu papel quando recebe
+mensagens em sua entrada esquerda.;
+#X text 12 135 No Pd voce deve pensar sobre a ordem que um objeto recebera
+suas mensagens. Se uma saida estiver conectada a mais de uma entrada
+\, sera' indefinida qual a entrada que vai receber a mensagem primeiro.
+Eu fiz esse exemplo de forma que o ojeto da esquerda recebe sua entrada
+do jeito "bom" \, direita pra esquerda \, de forma que quando a entrada
+"quente" (da esquerda) e' atingida \, os dados ja estao na da direita
+e a soma sai correta. O "ruim" recebe suas entradas na ordem errada
+e esta perpetuamente somando antes de receber todos os dados \, usando
+o valor "antigo" na entrada da direita. Existe um objeto para resolver
+esta ambiguidade:;
+#X text 13 434 O objeto Trigger recebe qualquer numero de argumentos
+bang e float (entre outros) e copia sua entrada para as respectivas
+saidas \, na ordem da direita para a esquerda. Ligue ate duas entradas
+sem cruzar os fios e voce tera o resultado esperado. Cruze os fios
+para criar intencionalmente o "efeito memoria".;
+#X text 69 61 fria;
+#X connect 2 0 14 0;
+#X connect 5 0 3 0;
+#X connect 6 0 7 0;
+#X connect 6 0 7 1;
+#X connect 6 0 5 1;
+#X connect 6 0 5 0;
+#X connect 7 0 4 0;
+#X connect 9 0 11 0;
+#X connect 10 0 11 1;
+#X connect 11 0 8 0;
+#X connect 12 0 0 0;
+#X connect 13 0 1 0;
+#X connect 14 0 12 0;
+#X connect 14 0 13 1;
+#X connect 14 1 12 1;
+#X connect 14 1 13 0;

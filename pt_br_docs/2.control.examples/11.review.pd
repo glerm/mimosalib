@@ -1,0 +1,42 @@
+#N canvas 255 229 679 543 12;
+#X text 406 511 updated for Pd version 0.34;
+#X obj 39 232 receive;
+#X obj 39 203 send;
+#X obj 39 289 pack;
+#X obj 111 233 r;
+#X obj 82 203 s;
+#X obj 40 348 timer;
+#X obj 40 60 float;
+#X obj 39 175 select;
+#X obj 40 89 +;
+#X obj 40 117 >=;
+#X obj 39 146 print;
+#X obj 39 260 trigger;
+#X obj 95 61 f;
+#X obj 100 176 sel;
+#X obj 111 259 t;
+#X obj 39 318 unpack;
+#X obj 40 435 pipe;
+#X obj 40 377 delay;
+#X obj 40 406 metro;
+#X text 75 89 (etc.);
+#X text 74 117 (etc.);
+#X text 20 7 Ate agora vimos os seguintes objetos \, alguns deles com
+abreviacoes. Clique com o botam direito neles para receber ajuda da
+referencia;
+#X text 144 59 Armazena um numero;
+#X text 146 90 aritmetica;
+#X text 145 116 comparacao;
+#X text 146 146 impressao;
+#X text 145 175 teste para numeros iguais;
+#X text 150 205 envio de mensagem sem fio;
+#X text 151 229 recepcao de mensagem sem fio;
+#X text 151 258 controla formato e ordem das mensagens;
+#X text 148 293 combina pedacos em uma lista;
+#X text 146 319 separa uma lista em pedacos;
+#X text 145 348 mede o tempo que passou;
+#X text 145 379 passa uma mensagem apos um tempo;
+#X text 143 409 repete mensagem;
+#X text 145 437 "delay" multipla;
+#X text 38 473 Existem muitos outros... Voce pode ver uma lista completa
+no INTRO.txt ou nos patches de referencia em ../5.reference;

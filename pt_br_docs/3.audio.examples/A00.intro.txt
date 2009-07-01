@@ -1,0 +1,10 @@
+Este e' o segundo das tres series de tutorial do Pd. Esta mostra as 
+funcionalidades de processamento de audio no dominio do tempo. (O 
+primeiro mostrou como usar Pd para fazer computacoes de "controle",
+e o terceiro e' sobre tecnicas no dominio da frequencia)
+
+Estes patches sao acompanhados por um LIVRO ONLINE:
+
+    http://www.crca.ucsd.edu/~msp/techniques.htm
+
+que desenvolve a teoria de base para eles.

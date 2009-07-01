@@ -1,0 +1,27 @@
+#N canvas 642 153 600 496 12;
+#X obj 204 105 print;
+#X floatatom 321 32 0 0 0 0 - - -;
+#X text 354 470 updated for release 0.33;
+#X msg 204 32 ola mundo;
+#X text 215 48 mensagem;
+#X text 319 49 atomo;
+#X text 201 123 objeto;
+#X text 54 187 Mensagens respondem aos cliques do mouse mandando seu
+conteudo para um ou mais destinos. O destino normal e a "saida" no
+canto inferior esquerdo da caixa.;
+#X text 55 239 Clique na caixa de mensagem e veja a janela principal
+do Pd. Voce deve ver a mensagem "ola mundo" aparecer.;
+#X text 55 278 Para mexer em Atomos "segure e arraste" o mouse para
+cima e para baixo alterando seu conteudo e mandando o resultado para
+suas saidas. Voce pode tambem digitar em um atomo apos clicar nele.
+Tecle "enter" para enviar o que digitou ou clique fora do atomo para
+cancelar.;
+#X text 52 359 Objetos como "print" acima podem ter varias funcoes
+dependendo do que foi digitado neles. O objeto "print" simplesmente
+imprime qualquer mensagem que chegar para ele.;
+#X text 53 150 Existem quatro tipos de objetos no Pd: Mensagem \, atomo
+\, objeto e comentario.;
+#X text 53 415 Para obter ajuda sobre um objeto \, clique nele com
+o botao direito do mouse e escolha "Ajuda". Uma janela aparecera.;
+#X connect 1 0 0 0;
+#X connect 3 0 0 0;
