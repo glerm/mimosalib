@@ -1,4 +1,4 @@
-#N canvas 119 56 450 551 10;
+#N canvas 119 49 450 489 10;
 #X obj 24 -125 openpanel;
 #X obj 84 -167 f \$0;
 #X obj 26 -102 pack s s;
@@ -16,7 +16,9 @@
 #X msg 196 -37 set \$1;
 #X obj 124 -126 table \$0-table;
 #X obj 30 33 file.path.split;
-#X obj 172 103 pddp/print;
+#X obj 70 183 pddp/print;
+#X floatatom 130 101 5 0 0 0 - - -;
+#X symbolatom 138 144 10 0 0 0 - - -;
 #X connect 0 0 2 0;
 #X connect 0 0 16 0;
 #X connect 1 0 10 0;
@@ -35,4 +37,5 @@
 #X connect 13 0 11 0;
 #X connect 14 0 11 0;
 #X connect 16 0 17 0;
+#X connect 18 0 17 0;
 #X coords 0 0 1 1 200 65 0;
