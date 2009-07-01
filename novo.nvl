@@ -1,0 +1,15 @@
+reset bang;
+filename /home/glerm/artesanatodevolts/mimosalib/rascunho/estudandosampler/loops/1-offspring.aif
+;
+end 0 0.236546;
+end 1 0.371715;
+end 2 0.486859;
+end 3 0.628285;
+end 4 0.864831;
+end 5 1;
+start 1 0.239049;
+start 2 0.371715;
+start 3 0.493116;
+start 4 0.750939;
+start 5 0.864831;
+done bang;

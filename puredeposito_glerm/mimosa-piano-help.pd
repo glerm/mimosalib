@@ -1,0 +1,17 @@
+#N canvas 0 26 1024 661 10;
+#X obj 26 27 mimosa-piano;
+#X floatatom 28 120 5 0 0 0 - - -;
+#X symbolatom 743 164 20 0 0 0 - - -;
+#X floatatom 26 5 5 0 127 0 - - -;
+#X obj 282 -46 cnv 15 500 40 empty \$0-cnv Do(4) 10 20 0 40 -33289
+-228856 0;
+#X msg 743 196 label \$1;
+#X obj 743 225 s \$0-cnv;
+#X text 25 -14 midi note;
+#X text 29 138 midi note;
+#X text 797 150 nome da nota;
+#X connect 0 0 1 0;
+#X connect 0 1 2 0;
+#X connect 2 0 5 0;
+#X connect 3 0 0 0;
+#X connect 5 0 6 0;

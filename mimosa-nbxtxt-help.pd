@@ -12,7 +12,7 @@
 -1 0 1;
 #X text 199 5 zero all;
 #X obj 513 -11 hsl 128 10 100 1000 1 0 empty empty empty -2 -8 0 10
--203904 -4160 -1 1700 1;
+-203904 -4160 -1 0 1;
 #N canvas 116 136 450 300 metrocount 0;
 #X obj 48 55 metro 250;
 #X obj 66 5 inlet;
@@ -61,8 +61,8 @@
 #X text 597 778 ____;
 #X obj 231 626 prepend add;
 #X obj 337 760 textfile;
-#X msg 607 707 print;
-#X msg 602 756 rewind;
+#X msg 640 666 print;
+#X msg 607 762 rewind;
 #X msg 611 730 clear;
 #N canvas 181 45 450 300 gravando 0;
 #X obj 209 179 list-drip;
@@ -94,7 +94,7 @@
 #X obj -18 73 route 0 1 2 3 4 5 6 7;
 #X obj -33 540 prepend 0;
 #X obj 67 540 prepend 1;
-#X obj 399 683 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 399 683 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 166 540 prepend 2;
 #X obj 267 540 prepend 3;
@@ -102,13 +102,13 @@
 #X obj 466 542 prepend 5;
 #X obj 565 542 prepend 6;
 #X obj 662 542 prepend 7;
-#X obj 532 617 t b b b b b b b b;
-#X obj 539 703 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 641 632 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 40 706 s preset;
 #X obj -20 38 r preset;
-#X obj 537 595 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 459 664 until;
+#X msg 503 598 8;
+#X obj 473 633 t f b;
 #X connect 0 0 32 1;
 #X connect 1 0 33 1;
 #X connect 2 0 35 1;
@@ -138,7 +138,7 @@
 #X connect 20 0 38 2;
 #X connect 22 0 8 0;
 #X connect 24 0 40 0;
-#X connect 25 0 53 0;
+#X connect 25 0 52 0;
 #X connect 26 0 25 0;
 #X connect 27 0 25 0;
 #X connect 28 0 25 0;
@@ -172,13 +172,8 @@
 #X connect 49 0 24 0;
 #X connect 50 0 24 0;
 #X connect 51 0 25 0;
-#X connect 51 1 25 0;
-#X connect 51 2 25 0;
-#X connect 51 3 25 0;
-#X connect 51 4 25 0;
-#X connect 51 5 25 0;
-#X connect 51 6 25 0;
-#X connect 51 7 25 0;
-#X connect 52 0 25 0;
-#X connect 54 0 41 0;
-#X connect 55 0 51 0;
+#X connect 53 0 41 0;
+#X connect 54 0 25 0;
+#X connect 55 0 56 0;
+#X connect 56 0 54 0;
+#X connect 56 1 27 0;

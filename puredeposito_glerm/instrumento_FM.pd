@@ -1,0 +1,54 @@
+#N canvas 109 25 745 640 12;
+#X obj 259 168 *~;
+#X floatatom 259 83 0 0 0 0 - - -;
+#X floatatom 169 118 0 0 0 0 - - -;
+#X obj 169 188 +~;
+#N canvas 0 0 450 300 graph1 0;
+#X array fm-output 441 float 0;
+#X coords 0 1.02 440 -1.02 200 130 1;
+#X restore 527 40 graph;
+#X msg 244 228 bang;
+#X obj 244 252 tabwrite~ fm-output;
+#X floatatom 281 138 0 0 0 0 - - -;
+#X obj 168 232 osc~;
+#X obj 259 108 osc~;
+#X obj 163 264 output~;
+#X text 493 651 updated for Pd version 0.37;
+#X text 33 8 MODULACAO DE FREQUENCIA ("FM") USANDO DOIS OSCILADORES
+;
+#X text 245 42 modulacao de;
+#X text 244 55 frequencia;
+#X text 129 97 portadora;
+#X text 46 167 de frequencia;
+#X text 44 186 portadora -->;
+#X text 20 248 "portadora" -->;
+#X text 22 218 oscilador de frequencia;
+#X text 36 132 adiciona um modulador;
+#X text 322 131 indice;
+#X text 320 150 de modulacao;
+#X text 286 228 <-- clique para gerar o grafico;
+#X text 531 172 --- 0.01 segundos ----;
+#X text 53 332 Este patch mostra a classica tecnica de sintese FM desenvolvida
+por John Chowning. Nao e' nada alem de um oscilador com vibrato controlado
+por outro oscilador de "modulacao". Primeiro \, para entender o patch
+\, deixe a frequerncia portadora em 400 mais ou menos \, e a mudulacao
+de frequencia entre 5 e 10 \, e tente indices de modulacao entre 0
+e 400 Voce vai ouvir uma onda senoide com um vibrato.;
+#X text 52 465 Para conseguir o som FM \, configure os 3 parametros
+(portadora \, modulacao e indice) na casa das centenas. Note que o
+timbre agora esta muito mais sensivel quando voce muda a modulacao
+\, porque isto muda as amplitudes das componentes sem mudar a percepcao
+da frequencia portadora.;
+#X text 56 552 As frequencias componentes sao iguais a frequencia portadora
+\, mais ou menos multitipla da frequencia moduladora. Uma discussao
+mais completa sobre sintese FM ocorre na parte 5 desta serie.;
+#X connect 0 0 3 1;
+#X connect 1 0 9 0;
+#X connect 2 0 3 0;
+#X connect 3 0 8 0;
+#X connect 5 0 6 0;
+#X connect 7 0 0 1;
+#X connect 8 0 6 0;
+#X connect 8 0 10 0;
+#X connect 8 0 10 1;
+#X connect 9 0 0 0;

@@ -1,0 +1,47 @@
+#N canvas 0 0 676 624 10;
+#X obj 78 137 adc~;
+#X msg 278 279 \; pd dsp 0;
+#X msg 278 327 \; pd dsp 1;
+#X text 350 335 liga;
+#X text 343 301 desliga;
+#X obj 80 163 bonk~;
+#X obj 115 181 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 202 240 select 1;
+#X obj 206 210 >;
+#X floatatom 79 210 5 0 0 0 - - -;
+#X floatatom 225 186 5 0 0 0 - - -;
+#X obj 66 272 bng 200 250 50 0 empty empty empty 0 -6 0 8 -241291 -143491
+-123526;
+#X obj 237 576 makenote;
+#X obj 242 606 noteout;
+#X obj 25 508 random 127;
+#X text 49 489 notas;
+#X text 189 505 intensidade;
+#X text 252 488 duracao;
+#X text 298 594 saida para algum instrumento MIDI conectado no PD;
+#X obj 305 486 random 500;
+#X obj 236 551 + 27;
+#X obj 193 522 random 100;
+#X text 129 13 DETECTOR DE RITMO - GERADOR DE PULSO por glerm_soares
+;
+#X text 128 57 Basta ligar qqer mic fulero num balde ou batuque e bater.
+De preferencia use Linux usando algum synth ou sampler conectado no
+PD via qjackctl no MIDI... duvidas organismo@gmail.com - glerm;
+#X text 224 167 volume da batida ( limiter);
+#X connect 0 0 5 0;
+#X connect 5 0 9 0;
+#X connect 5 1 6 0;
+#X connect 7 0 11 0;
+#X connect 8 0 7 0;
+#X connect 9 0 8 0;
+#X connect 10 0 8 1;
+#X connect 11 0 14 0;
+#X connect 11 0 19 0;
+#X connect 11 0 21 0;
+#X connect 12 0 13 0;
+#X connect 12 1 13 1;
+#X connect 14 0 12 0;
+#X connect 19 0 12 2;
+#X connect 20 0 12 1;
+#X connect 21 0 20 0;
