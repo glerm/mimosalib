@@ -3,13 +3,13 @@
 #X obj 101 250 hsl 800 12 0 1 0 0 \$0-start \$0-start-r empty -2 -8
 0 10 -182874 -1 -1 0 1;
 #X obj 101 263 hsl 800 12 0 1 0 0 \$0-end \$0-end-r empty -2 -8 0 10
--182874 -1 -1 0 1;
+-182874 -1 -1 18900 1;
 #N canvas 0 0 779 472 guts 0;
-#X obj 633 391 soundfiler;
+#X obj 627 391 soundfiler;
 #X obj 623 224 openpanel;
-#X obj 628 344 pack s \$0;
+#X obj 627 344 pack s \$0;
 #X obj 790 264 s \$0-selectarea;
-#X msg 633 369 read -resize \$1 \$2-L \$2-R;
+#X msg 627 369 read -resize \$1 \$2-L \$2-R;
 #X obj 745 122 s \$0-L;
 #X obj 789 122 s \$0-R;
 #X msg 750 86 resize 100;
@@ -41,11 +41,11 @@
 #X obj 476 31 key;
 #X obj 478 53 sel 32;
 #X obj 479 76 s \$0-play;
-#X obj 635 413 s \$0-samples;
+#X obj 627 413 s \$0-samples;
 #X obj 596 28 r \$0-slice;
 #X obj 407 196 tabplay~ \$0-R;
 #X obj 185 83 spigot 1;
-#X obj 251 52 r \$0-spigot;
+#X obj 251 51 r \$0-spigot;
 #N canvas 0 0 779 472 datasaving 0;
 #X obj 649 151 s \$0-slices-start;
 #X obj 649 129 pack 0 0;
@@ -222,7 +222,7 @@
 #X obj 717 478 s \$0-slice-1s-r;
 #X msg 719 456 0;
 #X obj 817 478 s \$0-slice-10s-r;
-#X obj 628 319 t a b b;
+#X obj 627 319 t a b b;
 #X msg 413 443 1;
 #X obj 412 421 loadbang;
 #X obj 412 464 s \$0-spigoot-r;
@@ -307,7 +307,7 @@
 #X obj 597 142 r \$0-slice;
 #X obj 597 172 makefilename notatrecho%d;
 #X msg 597 201 add \$1;
-#X msg 507 416 add notatrecho9;
+#X msg 507 416 add notatrecho0;
 #X obj 597 236 prepend set;
 #X obj 507 308 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -343,21 +343,22 @@
 #X restore 375 354 pd rack_de_efeitos;
 #X text 626 186 abre wav;
 #X text 609 282 recebe caminho arq. wav;
-#X obj 80 374 key;
+#X obj 37 374 key;
 #X msg 216 583 print;
 #X msg 189 459 start;
-#X msg 83 541 stop;
+#X msg 37 541 stop;
 #X msg 142 409 open /home/glerm/ali.wav;
 #X obj 294 567 oggwrite~ 2;
 #X floatatom 295 590 5 0 0 0 - - -;
 #X floatatom 357 590 5 0 0 0 - - -;
-#X obj 80 395 sel 39;
+#X obj 37 395 sel 39;
 #X obj 107 448 t b b;
 #X obj 110 469 delay 1000;
 #X floatatom 125 371 5 0 0 0 - - -;
 #X obj 37 483 sel 127;
 #X msg 9 28 \; pd dsp \$1;
 #X obj 9 1 r \$0-ligasom;
+#X obj 14 234 align;
 #X connect 0 0 36 0;
 #X connect 1 0 42 0;
 #X connect 2 0 4 0;
@@ -443,7 +444,7 @@ OPEN 17 7 0 14 -262144 -1 -1;
 #X obj 908 209 tgl 15 0 \$0-spigoot \$0-spigoot-r lock-length 17 7
 0 14 -262144 -1 -1 1 1;
 #X obj 99 307 hradio 50 1 0 16 \$0-slice \$0-slicerpanel empty 0 -8
-0 10 -54277 -83269 -1 9;
+0 10 -54277 -83269 -1 0;
 #X obj 164 283 cnv 15 30 20 empty empty 1 0 10 1 30 -204786 -13330
 0;
 #X obj 212 282 cnv 15 30 20 empty empty 2 0 12 1 30 -204786 -13330
@@ -541,6 +542,7 @@ bang \;;
 #X msg 272 48 patterns nvl \, /home/glerm/artesanatodevolts/mimosalib
 ;
 #X obj 321 310 prepend set;
+#X obj 381 135 shell;
 #X connect 0 0 6 0;
 #X connect 0 0 16 0;
 #X connect 1 0 46 1;
@@ -765,8 +767,8 @@ bang \;;
 -262144 -4160 1 1;
 #X symbolatom 30 389 10 0 0 0 - #0-defaultpitch -;
 #X obj 25 443 s \$0-defaultpitchlabel;
-#X obj 4 -18 cnv 15 450 60 empty \$0-defaultpitchlabel Mi-5 0 30 0
-50 -66577 -257985 0;
+#X obj 4 -18 cnv 15 450 60 empty \$0-defaultpitchlabel Fa_sustenido-8
+0 30 0 50 -66577 -257985 0;
 #X msg 28 413 label \$1;
 #X obj 244 428 s \$0-pshift;
 #X floatatom 190 443 5 0 0 0 - - -;
@@ -777,15 +779,15 @@ bang \;;
 #X obj 604 478 r \$0-play;
 #X obj 100 99 cnv 15 800 150 empty \$0-cnvtable empty 20 12 0 14 -128992
 -1 0;
-#X obj 100 100 cnv 15 1 148 empty \$0-selectarea 9 2 -8 0 50 -261963
+#X obj 100 100 cnv 15 189 148 empty \$0-selectarea 0 2 -8 0 50 -261963
 -148500 0;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array \$0-L 378564 float 2;
-#X coords 0 1 378564 -1 800 75 1;
+#X array \$0-L 65960 float 2;
+#X coords 0 1 65960 -1 800 75 1;
 #X restore 100 99 graph;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array \$0-R 378564 float 2;
-#X coords 0 1 378564 -1 800 75 1;
+#X array \$0-R 65960 float 2;
+#X coords 0 1 65960 -1 800 75 1;
 #X restore 100 174 graph;
 #X msg 210 369 12;
 #N canvas 0 26 1024 661 piano 0;
@@ -2888,7 +2890,7 @@ bang \;;
 #X connect 100 0 101 0;
 #X coords 0 -1 1 1 900 75 2 100 100;
 #X restore 3 -97 pd piano;
-#X obj 742 -28 cnv 15 200 30 empty \$0-presetcanvas siri.nvl 0 20 0
+#X obj 742 -28 cnv 15 200 30 empty \$0-presetcanvas novo.nvl 0 20 0
 20 -191407 -16662 0;
 #X obj 338 365 r \$0-tone;
 #X floatatom 264 367 5 0 0 0 - - -;
@@ -2944,7 +2946,7 @@ bang \;;
 #X connect 9 6 8 0;
 #X restore 516 468 pd presets;
 #X obj 506 443 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 6;
 #X floatatom 149 555 5 0 0 0 - - -;
 #X obj 636 28 s \$0-L;
 #X msg 636 -4 normalize 1;
