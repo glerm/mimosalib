@@ -1,9 +1,9 @@
 #N canvas 0 0 779 472 10;
 #X declare -stdpath extra/tof;
 #X obj 101 250 hsl 800 12 0 1 0 0 \$0-start \$0-start-r empty -2 -8
-0 10 -182874 -1 -1 0 1;
+0 10 -182874 -1 -1 19100 1;
 #X obj 101 263 hsl 800 12 0 1 0 0 \$0-end \$0-end-r empty -2 -8 0 10
--182874 -1 -1 18900 1;
+-182874 -1 -1 29700 1;
 #N canvas 0 0 779 472 guts 0;
 #X obj 627 391 soundfiler;
 #X obj 623 224 openpanel;
@@ -307,7 +307,7 @@
 #X obj 597 142 r \$0-slice;
 #X obj 597 172 makefilename notatrecho%d;
 #X msg 597 201 add \$1;
-#X msg 507 416 add notatrecho0;
+#X msg 507 416 add notatrecho1;
 #X obj 597 236 prepend set;
 #X obj 507 308 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -444,7 +444,7 @@ OPEN 17 7 0 14 -262144 -1 -1;
 #X obj 908 209 tgl 15 0 \$0-spigoot \$0-spigoot-r lock-length 17 7
 0 14 -262144 -1 -1 1 1;
 #X obj 99 307 hradio 50 1 0 16 \$0-slice \$0-slicerpanel empty 0 -8
-0 10 -54277 -83269 -1 0;
+0 10 -54277 -83269 -1 1;
 #X obj 164 283 cnv 15 30 20 empty empty 1 0 10 1 30 -204786 -13330
 0;
 #X obj 212 282 cnv 15 30 20 empty empty 2 0 12 1 30 -204786 -13330
@@ -773,13 +773,13 @@ bang \;;
 #X obj 244 428 s \$0-pshift;
 #X floatatom 190 443 5 0 0 0 - - -;
 #X obj 210 393 hradio 12 1 0 24 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 12;
 #X obj 194 420 - 12;
 #X obj 603 499 random 24;
 #X obj 604 478 r \$0-play;
 #X obj 100 99 cnv 15 800 150 empty \$0-cnvtable empty 20 12 0 14 -128992
 -1 0;
-#X obj 100 100 cnv 15 189 148 empty \$0-selectarea 0 2 -8 0 50 -261963
+#X obj 291 100 cnv 15 106 148 empty \$0-selectarea 1 2 -8 0 50 -261963
 -148500 0;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array \$0-L 65960 float 2;
@@ -857,7 +857,7 @@ bang \;;
 #X obj 599 117 vsl 15 40 0 127 0 0 \$0-nota50S \$0-nota50R empty 0
 -9 0 10 -262144 -262144 -262144 0 1;
 #X obj 616 117 vsl 15 40 0 127 0 0 \$0-nota52S \$0-nota52R empty 0
--9 0 10 -262144 -262144 -262144 0 1;
+-9 0 10 -241291 -241291 -241291 0 1;
 #X obj 633 117 vsl 15 40 0 127 0 0 \$0-nota53S \$0-nota53R empty 0
 -9 0 10 -262144 -262144 -262144 0 1;
 #X obj 650 117 vsl 15 40 0 127 0 0 \$0-nota55S \$0-nota55R empty 0
@@ -941,7 +941,7 @@ bang \;;
 #X obj 642 105 vsl 13 30 0 127 0 0 \$0-nota54S \$0-nota54R empty 0
 -9 0 10 -1 -1 -1 0 1;
 #X obj 660 105 vsl 13 30 0 127 0 0 \$0-nota56S \$0-nota56R empty 0
--9 0 10 -241291 -241291 -241291 0 1;
+-9 0 10 -1 -1 -1 0 1;
 #X obj 678 105 vsl 13 30 0 127 0 0 \$0-nota58S \$0-nota58R empty 0
 -9 0 10 -1 -1 -1 0 1;
 #X obj 712 105 vsl 13 30 0 127 0 0 \$0-nota61S \$0-nota61R empty 0
@@ -2927,8 +2927,9 @@ bang \;;
 #X msg 151 200 0 1 2 3 4 5 6 7;
 #X obj 80 232 outlet;
 #X obj 127 3 inlet;
-#X msg 231 223 1 0 4 7 5 0 1 4;
-#X obj 128 26 sel 0 1 2 3 4 5 6;
+#X msg 266 106 1 0 4 7 5 0 1 4;
+#X obj 128 26 sel 0 1 2 3 4 5 6 7;
+#X msg 277 144 0 1 4 3 5 3 7 7;
 #X connect 0 0 6 0;
 #X connect 1 0 6 0;
 #X connect 2 0 6 0;
@@ -2944,9 +2945,11 @@ bang \;;
 #X connect 9 4 3 0;
 #X connect 9 5 5 0;
 #X connect 9 6 8 0;
+#X connect 9 7 10 0;
+#X connect 10 0 6 0;
 #X restore 516 468 pd presets;
 #X obj 506 443 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 6;
+-1 -1 0;
 #X floatatom 149 555 5 0 0 0 - - -;
 #X obj 636 28 s \$0-L;
 #X msg 636 -4 normalize 1;
