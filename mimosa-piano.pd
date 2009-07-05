@@ -1,4 +1,4 @@
-#N canvas 0 26 1024 661 10;
+#N canvas 0 0 800 472 10;
 #N canvas 0 0 664 495 nomesnotas 0;
 #X obj 80 47 inlet;
 #X obj 79 436 outlet;
@@ -66,7 +66,7 @@
 #X obj 143 116 vsl 15 40 0 127 0 0 \$0-nota4S \$0-nota4R empty 0 -9
 0 10 -262144 -262144 -262144 0 1;
 #X obj 160 116 vsl 15 40 0 127 0 0 \$0-nota5S \$0-nota5R empty 0 -9
-0 10 -262144 -262144 -262144 100 1;
+0 10 -262144 -262144 -262144 0 1;
 #X obj 177 116 vsl 15 40 0 127 0 0 \$0-nota7S \$0-nota7R empty 0 -9
 0 10 -262144 -262144 -262144 0 1;
 #X obj 194 116 vsl 15 40 0 127 0 0 \$0-nota9S \$0-nota9R empty 0 -9
@@ -90,7 +90,7 @@
 #X obj 347 116 vsl 15 40 0 127 0 0 \$0-nota24S \$0-nota24R empty 0
 -9 0 10 -262144 -262144 -262144 0 1;
 #X obj 364 116 vsl 15 40 0 127 0 0 \$0-nota26S \$0-nota26R empty 0
--9 0 10 -262144 -262144 -262144 0 1;
+-9 0 10 -241291 -241291 -241291 0 1;
 #X obj 381 116 vsl 15 40 0 127 0 0 \$0-nota28S \$0-nota28R empty 0
 -9 0 10 -262144 -262144 -262144 0 1;
 #X obj 398 116 vsl 15 40 0 127 0 0 \$0-nota29S \$0-nota29R empty 0
@@ -166,7 +166,7 @@
 #X obj 187 105 vsl 13 30 0 127 0 0 \$0-nota8S \$0-nota8R empty 0 -9
 0 10 -1 -1 -1 0 1;
 #X obj 205 105 vsl 13 30 0 127 0 0 \$0-nota10S \$0-nota10R empty 0
--9 0 10 -1 -1 -1 100 1;
+-9 0 10 -1 -1 -1 0 1;
 #X obj 237 105 vsl 13 30 0 127 0 0 \$0-nota13S \$0-nota13R empty 0
 -9 0 10 -1 -1 -1 0 1;
 #X obj 254 105 vsl 13 30 0 127 0 0 \$0-nota15S \$0-nota15R empty 0
@@ -3509,6 +3509,9 @@
 #X obj 73 315 * 12;
 #X obj 74 338 + 12;
 #X obj 77 288 r \$0-root_;
+#X obj 297 407 outlet;
+#X obj 299 374 mtof;
+#X obj 318 319 r \$0-MIDI;
 #X connect 0 0 101 0;
 #X connect 0 1 101 1;
 #X connect 1 0 94 0;
@@ -3531,4 +3534,6 @@
 #X connect 108 0 109 0;
 #X connect 109 0 107 1;
 #X connect 110 0 108 0;
+#X connect 112 0 111 0;
+#X connect 113 0 112 0;
 #X coords 0 -1 1 1 905 75 2 100 100;
