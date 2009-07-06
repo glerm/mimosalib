@@ -34,6 +34,8 @@
 #X obj 217 461 outlet;
 #X obj 218 436 * 0;
 #X obj 164 126 r picknote;
+#X obj 330 49 r cleannotes;
+#X msg 331 70 0;
 #X connect 0 1 1 0;
 #X connect 0 2 14 0;
 #X connect 0 2 24 1;
@@ -78,4 +80,6 @@
 #X connect 28 0 30 0;
 #X connect 30 0 29 0;
 #X connect 31 0 28 0;
+#X connect 32 0 33 0;
+#X connect 33 0 20 0;
 #X coords 0 -1 1 1 50 32 2 100 100;
