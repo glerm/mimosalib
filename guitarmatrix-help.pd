@@ -1,4 +1,4 @@
-#N canvas 0 26 1024 640 12;
+#N canvas 0 0 779 472 12;
 #X msg 87 9 52 47 43 38 33 28;
 #X obj 87 65 guitarmatrix;
 #X obj 1185 365 pack f f f f f f;
@@ -29,7 +29,7 @@
 #X msg 29 445 set;
 #X obj 442 473 bng 40 250 50 0 empty empty empty 17 7 0 10 -257217
 -262130 -1;
-#N canvas 0 26 1024 661 tabs 0;
+#N canvas 0 0 779 493 tabs 0;
 #X obj 19 45 inlet;
 #X obj 19 75 route 0 1 2 3 4 5 6 7 8 9 10 11 12;
 #X obj 19 118 prepend 0;
@@ -86,13 +86,16 @@
 #X connect 12 0 26 0;
 #X connect 13 0 27 0;
 #X connect 14 0 28 0;
-#X restore 97 496 pd tabs;
+#X restore 42 499 pd tabs;
+#X msg 104 34 50 51 52 53 54 55;
+#X obj 160 479 prepend set;
+#X msg 167 505 0 52 0 0 0 0 0;
 #X connect 0 0 1 0;
 #X connect 1 0 20 0;
 #X connect 2 0 3 0;
 #X connect 6 0 5 0;
 #X connect 11 0 12 0;
-#X connect 13 0 26 0;
+#X connect 13 0 28 0;
 #X connect 13 1 14 0;
 #X connect 14 0 13 0;
 #X connect 15 0 13 0;
@@ -105,3 +108,5 @@
 #X connect 22 0 21 0;
 #X connect 23 0 24 0;
 #X connect 25 0 22 0;
+#X connect 27 0 1 0;
+#X connect 28 0 29 0;
