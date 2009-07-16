@@ -1,0 +1,18 @@
+#N canvas 529 355 450 300 10;
+#X obj 144 11 inlet;
+#X obj 144 190 prepend add;
+#X floatatom 126 86 5 0 0 0 - - -;
+#X obj 180 47 timer;
+#X floatatom 196 104 5 0 0 0 - - -;
+#X obj 207 26 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 143 127 pack f f;
+#X msg 141 157 \$2 receive1 \$1;
+#X obj 197 75 delta;
+#X connect 2 0 6 0;
+#X connect 3 0 8 0;
+#X connect 4 0 6 1;
+#X connect 5 0 3 1;
+#X connect 6 0 7 0;
+#X connect 7 0 1 0;
+#X connect 8 0 4 0;

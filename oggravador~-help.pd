@@ -1,0 +1,60 @@
+#N canvas 0 18 991 630 10;
+#X obj 256 161 osc~;
+#X obj 6 221 dac~;
+#X obj 288 161 osc~;
+#X obj 253 205 *~;
+#X obj 289 204 *~;
+#X msg 7 289 \; pd dsp \$1;
+#X obj 3 264 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
+;
+#X obj 6 241 loadbang;
+#X text 26 268 SOM On/Off;
+#X obj 399 150 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 400 185 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X text 6 -12 Gravador rapido em OGG audio;
+#X obj 240 -2 vsl 15 128 50 10000 1 0 empty empty empty 0 -8 0 8 -262131
+-1 -1 0 1;
+#X obj 302 -3 vsl 15 128 50 10000 1 0 empty empty empty 0 -8 0 8 -261681
+-1 -1 0 1;
+#X floatatom 237 137 5 0 0 0 - - -;
+#X floatatom 306 132 5 0 0 0 - - -;
+#X floatatom 404 166 5 0 0 0 - - -;
+#X floatatom 412 204 5 0 0 0 - - -;
+#X text 437 130 volume direito;
+#X text 420 224 volume esquerdo;
+#X text 239 -23 Osciladores;
+#X text 14 29 Grava um arquivo com;
+#X text 16 49 o nome gambi_HORA_DATA.ogg;
+#X text 15 1 ------------------------;
+#X obj 218 264 oggravador~;
+#X text 314 316 <-----Liga desliga gravador;
+#X text 385 330 (ou Shift+r);
+#X text 304 371 <-----Numero de Arquivos;
+#X text 372 385 gravados nesta sessao;
+#X text 415 495 GAMB+i_lib;
+#X text 414 509 glerm soares;
+#X text 412 480 --------------;
+#X text 413 535 --------------;
+#X text 472 526 2006;
+#X text 418 525 GNU-GPL;
+#X text 249 277 <----------------Liga DSP do gravador;
+#X text 16 69 no seu diretorio $HOME;
+#X text 216 250 ( )..............( )<-----Entrada Estereo;
+#X connect 0 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 1 0;
+#X connect 3 0 24 0;
+#X connect 4 0 1 1;
+#X connect 4 0 24 1;
+#X connect 6 0 5 0;
+#X connect 7 0 6 0;
+#X connect 9 0 3 1;
+#X connect 9 0 16 0;
+#X connect 10 0 4 1;
+#X connect 10 0 17 0;
+#X connect 12 0 14 0;
+#X connect 13 0 15 0;
+#X connect 14 0 0 0;
+#X connect 15 0 2 0;
