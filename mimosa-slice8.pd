@@ -1,24 +1,24 @@
 #N canvas 277 119 672 499 10;
 #X obj 213 136 nbx 1 20 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 20
--257985 -13381 -1 0 256;
+-257985 -13381 -1 7 256;
 #X obj 143 136 nbx 1 20 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 20
 -260097 -86853 -1 0 256;
 #X obj 178 136 nbx 1 20 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 20
--4034 -13381 -1 0 256;
+-4034 -13381 -1 7 256;
 #X obj 108 136 nbx 1 20 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 20
--16662 -203904 -1 0 256;
+-16662 -203904 -1 7 256;
 #X obj 353 136 nbx 1 20 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 20
--257985 -13381 -1 0 256;
+-257985 -13381 -1 6 256;
 #X obj 283 136 nbx 1 20 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 20
--260097 -86853 -1 0 256;
+-260097 -86853 -1 6 256;
 #X obj 318 136 nbx 1 20 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 20
--4034 -13381 -1 0 256;
+-4034 -13381 -1 1 256;
 #X obj 248 136 nbx 1 20 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 20
--16662 -203904 -1 0 256;
+-16662 -203904 -1 1 256;
 #X obj 202 403 outlet;
 #X obj 38 22 inlet;
 #X obj 106 158 hradio 35 1 0 8 empty empty empty 0 -8 0 10 -228856
--58253 -1 0;
+-58253 -1 5;
 #X obj 113 321 int;
 #X obj 149 321 int;
 #X obj 185 321 int;
@@ -100,6 +100,43 @@
 #X obj 418 444 outlet;
 #X obj 416 417 prepend set;
 #X obj 388 383 pack f f f f f f f f;
+#X obj 103 23 metro 145;
+#X obj 102 102 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 103 46 counter 7;
+#X floatatom 120 102 5 0 0 0 - - -;
+#N canvas 0 0 450 300 presets 0;
+#X msg 106 59 6 3 0 7 6 6 2 0;
+#X msg 115 84 0 7 6 0 3 5 0 3;
+#X msg 129 107 4 0 4 4 1 1 1 4;
+#X msg 165 164 1 4 0 6 4 2 4 0;
+#X msg 153 135 7 0 7 7 1 6 1 6;
+#X msg 151 200 0 1 2 3 4 5 6 7;
+#X obj 80 232 outlet;
+#X obj 127 3 inlet;
+#X msg 266 106 1 0 4 7 5 0 1 4;
+#X obj 128 26 sel 0 1 2 3 4 5 6 7;
+#X msg 277 144 0 1 4 3 5 3 7 7;
+#X connect 0 0 6 0;
+#X connect 1 0 6 0;
+#X connect 2 0 6 0;
+#X connect 3 0 6 0;
+#X connect 4 0 6 0;
+#X connect 5 0 6 0;
+#X connect 7 0 9 0;
+#X connect 8 0 6 0;
+#X connect 9 0 0 0;
+#X connect 9 1 1 0;
+#X connect 9 2 2 0;
+#X connect 9 3 4 0;
+#X connect 9 4 3 0;
+#X connect 9 5 5 0;
+#X connect 9 6 8 0;
+#X connect 9 7 10 0;
+#X connect 10 0 6 0;
+#X restore 458 80 pd presets;
+#X obj 156 103 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
 #X connect 0 0 14 1;
 #X connect 1 0 12 1;
 #X connect 2 0 13 1;
@@ -149,4 +186,10 @@
 #X connect 25 0 21 4;
 #X connect 27 0 26 0;
 #X connect 28 0 27 0;
+#X connect 29 0 31 0;
+#X connect 30 0 29 0;
+#X connect 31 0 10 0;
+#X connect 32 0 29 1;
+#X connect 33 0 21 4;
+#X connect 34 0 33 0;
 #X coords 0 -1 1 1 320 100 2 100 100;
