@@ -1,0 +1,11 @@
+reset bang;
+filename /home/glerm/samples/cadela.wav;
+end 0 0.246558;
+end 1 0.510638;
+end 2 0.762203;
+end 3 0.996245;
+end 4 0.131414;
+start 1 0.246558;
+start 2 0.508135;
+start 3 0.763454;
+done bang;

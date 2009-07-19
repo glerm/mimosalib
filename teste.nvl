@@ -1,0 +1,13 @@
+filename /home/glerm/samples/patchenloops/3453_patchen_over_dry.wav;
+end 0 0.177722;
+end 1 0.36796;
+end 2 0.559449;
+end 3 0.871089;
+end 4 1;
+start 0 0;
+start 1 0.182728;
+start 2 0.370463;
+start 3 0.61577;
+start 4 0.87234;
+
+

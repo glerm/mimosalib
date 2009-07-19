@@ -1,0 +1,19 @@
+reset bang;
+filename /home/glerm/samples/patchenloops/3453_patchen_over_dry.wav
+;
+end 0 0.117647;
+end 1 0.270338;
+end 2 0.433041;
+end 3 0.556946;
+end 4 0.684606;
+end 5 0.807259;
+end 6 0.87234;
+end 7 0.998748;
+start 1 0.121402;
+start 2 0.26408;
+start 3 0.43179;
+start 4 0.556946;
+start 5 0.683354;
+start 6 0.809762;
+start 7 0.871089;
+done bang;
