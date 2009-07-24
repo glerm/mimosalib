@@ -1,5 +1,6 @@
 #N canvas 0 26 1024 661 10;
 #X declare -stdpath extra/tof;
+#X declare -lib iem_tab;
 #N canvas 0 26 1024 661 containter_xml 0;
 #X msg 887 160 print;
 #X obj 104 160 file.browser_;
@@ -88,7 +89,7 @@
 #X obj 273 279 pack 0 0;
 #X obj 273 256 f;
 #X obj 274 216 t b f;
-#X obj 282 333 s \$0-slices-end;
+#X obj 273 303 s \$0-slices-end;
 #X obj 71 165 r \$0-slice;
 #X obj 90 358 tabread \$0-slices-start;
 #X obj 71 189 t f f f;
@@ -115,6 +116,10 @@
 #X obj 430 -13 s \$0-spigot;
 #X obj 361 -88 t b b b b;
 #X text 43 148 update do slice;
+#X text 136 440 restaura o slider;
+#X text 175 383 restaura o slider;
+#X text 367 303 escreve o techo na tabela;
+#X text 427 -113 acionado ao crregar novo nome;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
 #X connect 3 0 2 0;
@@ -154,6 +159,9 @@
 #X connect 32 2 30 0;
 #X connect 32 3 18 0;
 #X restore 400 260 pd updatede_slices;
+#X text 14 -97 a Matt Davey's patch;
+#X text 18 -82 (thanks for sharing);
+#X text -4 -112 data formatting and persistence based in;
 #X connect 0 0 19 0;
 #X connect 1 0 17 0;
 #X connect 4 0 5 0;
@@ -245,36 +253,36 @@
 #X connect 48 0 47 0;
 #X coords 0 -1 1 1 210 200 2 100 100;
 #X restore 792 40 pd containter_xml;
-#X obj -15 -106 cnv 15 600 60 empty \$0-defaultpitchlabel Do-4 0 30
-0 50 -1 -262144 0;
+#X obj -15 -106 cnv 15 600 60 empty \$0-defaultpitchlabel Si_bemol-2
+0 30 0 50 -1 -262144 0;
 #X obj 799 -13 tgl 40 1 \$0-ligasom aaaaaaaaaa DSP 0 -7 0 10 -99865
 -262144 -4160 1 1;
-#X obj 587 -73 cnv 15 350 30 empty \$0-presetcanvas habib.nvl 0 20
+#X obj 587 -73 cnv 15 350 30 empty \$0-presetcanvas batida.nvl 0 20
 0 25 -191407 -16662 0;
 #X obj 587 -89 cnv 15 200 15 empty empty preset: 0 10 0 20 -158624
 -13381 0;
 #X obj 949 26 image NAVA100.gif;
 #N canvas 0 26 1024 661 sequencer 0;
-#X obj 101 101 cnv 15 797 97 empty \$0-playercnv empty 20 12 0 14 -160788
+#X obj 101 101 cnv 15 797 97 empty \$0-playercnv empty 20 12 0 14 -160781
 -1 0;
 #X obj 217 142 nbx 2 15 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 15
--257985 -13381 -1 2 256;
+-257985 -13381 -1 3 256;
 #X obj 143 142 nbx 2 15 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 15
 -260097 -86853 -1 7 256;
 #X obj 180 142 nbx 2 15 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 15
 -4034 -13381 -1 4 256;
 #X obj 105 141 nbx 2 15 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 15
--16662 -203904 -1 4 256;
+-16662 -203904 -1 0 256;
 #X obj 365 142 nbx 2 15 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 15
--257985 -13381 -1 2 256;
+-257985 -13381 -1 5 256;
 #X obj 291 142 nbx 2 15 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 15
--260097 -86853 -1 7 256;
+-260097 -86853 -1 2 256;
 #X obj 328 142 nbx 2 15 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 15
--4034 -13381 -1 5 256;
-#X obj 254 142 nbx 2 15 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 15
--16662 -203904 -1 4 256;
+-4034 -13381 -1 3 256;
+#X obj 253 140 nbx 2 15 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 15
+-16662 -203904 -1 1 256;
 #X obj 105 157 hradio 37 1 0 8 empty empty empty 0 -8 0 10 -228856
--58253 -1 1;
+-58253 -1 7;
 #X obj 123 331 int;
 #X obj 159 331 int;
 #X obj 195 331 int;
@@ -284,13 +292,13 @@
 #X obj 336 331 int;
 #X obj 370 331 int;
 #X obj 199 220 sel 0 1 2 3 4 5 6 7;
-#X obj 847 112 bng 15 250 50 0 empty empty random -20 -5 0 10 -262144
+#X obj 351 110 bng 15 250 50 0 empty empty random -20 -5 0 10 -262144
 -1 -1;
-#X obj 882 138 bng 15 250 50 0 empty empty > 0 -5 0 15 -262144 -1 -1
+#X obj 425 160 bng 15 250 50 0 empty empty > 0 -5 0 15 -262144 -1 -1
 ;
-#X obj 863 138 bng 15 250 50 0 empty empty < 0 -5 0 15 -262144 -1 -1
+#X obj 408 146 bng 15 250 50 0 empty empty < 0 -5 0 15 -262144 -1 -1
 ;
-#X obj 882 185 bng 12 250 50 0 empty empty zero -15 -5 0 10 -262144
+#X obj 419 184 bng 12 250 50 0 empty empty zero -15 -5 0 10 -262144
 -1 -1;
 #X obj 311 407 prepend set;
 #X obj 283 373 pack f f f f f f f f;
@@ -377,12 +385,12 @@
 #X floatatom 159 115 5 1 16 2 div - -;
 #X msg 23 137 8;
 #X floatatom 194 115 5 0 16 2 pattern - -;
-#X symbolatom 37 538 10 0 0 0 - #0-defaultpitch -;
-#X obj 34 584 s \$0-defaultpitchlabel;
-#X msg 35 564 label \$1;
-#X obj 617 264 s \$0-L;
-#X msg 619 241 normalize 1;
-#X obj 659 263 s \$0-R;
+#X symbolatom 799 399 10 0 0 0 - #0-defaultpitch -;
+#X obj 800 439 s \$0-defaultpitchlabel;
+#X msg 801 419 label \$1;
+#X obj 796 375 s \$0-L;
+#X msg 798 352 normalize 1;
+#X obj 838 374 s \$0-R;
 #N canvas 0 0 450 300 counter 0;
 #X obj 61 34 inlet;
 #X obj 73 154 f 0;
@@ -404,11 +412,11 @@
 #X connect 7 0 8 1;
 #X connect 8 0 1 1;
 #X restore 44 33 pd counter;
-#X obj 823 209 s \$0-rdn;
-#X text 828 228 fator random;
-#X floatatom 863 111 5 0 0 0 - - -;
-#X obj 862 67 loadbang;
-#X msg 913 93 8;
+#X obj 462 76 s \$0-rdn;
+#X text 459 59 fator random;
+#X floatatom 368 108 5 0 0 0 - - -;
+#X obj 260 -12 loadbang;
+#X msg 284 9 8;
 #N canvas 0 0 450 300 paterns 0;
 #X msg 106 59 6 3 0 7 6 6 2 0;
 #X msg 115 84 0 7 6 0 3 5 0 3;
@@ -439,7 +447,7 @@
 #X connect 9 0 6 0;
 #X connect 10 0 6 0;
 #X restore 393 -7 pd paterns;
-#X obj 620 219 r \$0-normalize;
+#X obj 799 330 r \$0-normalize;
 #N canvas 0 0 558 488 tuning 0;
 #X obj 38 122 sel 122 120 99 118 98 110 109 44 46 29;
 #X msg 132 156 0;
@@ -552,7 +560,7 @@
 #X obj 156 142 t b;
 #N canvas 105 468 854 116 mouseslices 0;
 #X obj -779 27 hradio 50 1 0 16 \$0-slice \$0-slicerpanel empty 0 -8
-0 10 -54277 -83269 -1 4;
+0 10 -54277 -83269 -1 0;
 #X obj -715 1 cnv 15 30 20 empty empty 1 0 10 1 30 -204786 -13330 0
 ;
 #X obj -667 0 cnv 15 30 20 empty empty 2 0 12 1 30 -204786 -13330 0
@@ -598,8 +606,6 @@
 #X restore 862 0 pd controls;
 #X obj 862 -20 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#N canvas 0 26 1024 661 selectarea 0;
-#X restore 691 2 pd selectarea;
 #N canvas 0 26 1024 661 play_segments 0;
 #X obj 627 391 soundfiler;
 #X obj 136 48 openpanel;
@@ -739,8 +745,6 @@
 #X text 58 11 dsp;
 #X text 112 211 display numero do trecho;
 #X text 611 282 valido para 1 uso do arq.;
-#X obj 9 350 tab_copy \$0-L \$0-R;
-#X obj 9 330 r \$0-mono2stereo;
 #X obj 519 -105 -;
 #X obj 517 51 s \$0-selectarea;
 #X msg 519 -35 vis_size \$1 148;
@@ -757,6 +761,14 @@
 #X msg 651 5 color -1.42133e+07 -1 -1;
 #X text 616 -79 tamanho do segmento;
 #X msg 704 221 pos -12 -26 \, vis_size 15 148 \, label navalha;
+#X obj 10 362 tab_copy \$0-L \$0-R;
+#X obj 10 342 r \$0-mono2stereo;
+#X obj 6 460 import iem_tab;
+#X text 353 0 toca segmentos;
+#X text 18 442 tab_copy depende iem_tab;
+#X text 880 -159 a Matt Davey's patch;
+#X text 884 -144 (thanks for sharing);
+#X text 862 -173 segment player based in;
 #X connect 0 0 25 0;
 #X connect 1 0 28 0;
 #X connect 2 0 4 0;
@@ -764,7 +776,7 @@
 #X connect 7 0 5 0;
 #X connect 7 0 6 0;
 #X connect 8 0 52 0;
-#X connect 9 0 73 0;
+#X connect 9 0 71 0;
 #X connect 12 0 11 0;
 #X connect 13 0 12 0;
 #X connect 14 0 8 0;
@@ -806,28 +818,32 @@
 #X connect 50 0 49 0;
 #X connect 51 0 10 0;
 #X connect 52 0 51 0;
-#X connect 57 0 56 0;
-#X connect 58 0 65 0;
-#X connect 58 0 66 0;
-#X connect 60 0 59 0;
-#X connect 61 0 63 0;
+#X connect 56 0 63 0;
+#X connect 56 0 64 0;
+#X connect 58 0 57 0;
+#X connect 59 0 61 0;
+#X connect 60 0 56 0;
+#X connect 61 0 56 0;
+#X connect 61 1 56 1;
 #X connect 62 0 58 0;
-#X connect 63 0 58 0;
-#X connect 63 1 58 1;
-#X connect 64 0 60 0;
-#X connect 65 0 64 0;
-#X connect 69 0 70 0;
-#X connect 69 0 71 0;
-#X connect 70 0 59 0;
-#X connect 71 0 67 0;
-#X connect 73 0 3 0;
-#X restore 692 -18 pd play_segments;
-#X obj 379 107 bng 20 250 50 0 \$0-save \$0-enterR slice_update -85
+#X connect 63 0 62 0;
+#X connect 67 0 68 0;
+#X connect 67 0 69 0;
+#X connect 68 0 57 0;
+#X connect 69 0 65 0;
+#X connect 71 0 3 0;
+#X connect 73 0 72 0;
+#X restore 797 202 pd play_segments;
+#X obj 872 172 bng 20 250 50 0 \$0-save \$0-enterR slice_update -85
 15 0 12 -159808 -262144 -262144;
-#X text 322 101 (shift+u);
-#X msg 662 391 color -1.03061e+07 -1 -1;
-#X obj 660 359 loadbang;
-#X obj 667 423 s \$0-playercnv;
+#X text 815 166 (shift+u);
+#X msg 800 288 color -1.03061e+07 -1 -1;
+#X obj 800 267 loadbang;
+#X obj 799 307 s \$0-playercnv;
+#X obj 797 101 cnv 15 100 15 empty empty automation: 0 7 1 12 -203904
+-16662 0;
+#X text 801 217 engine segmentos;
+#X text 792 16 contoles de entrada humana;
 #X connect 1 0 13 1;
 #X connect 2 0 11 1;
 #X connect 3 0 12 1;
@@ -897,29 +913,29 @@
 #X connect 50 0 41 0;
 #X connect 52 0 51 0;
 #X connect 54 0 53 0;
-#X connect 59 0 61 0;
-#X connect 60 0 59 0;
+#X connect 58 0 60 0;
+#X connect 59 0 58 0;
 #X coords 0 -1 1 1 800 100 2 100 100;
-#X restore -13 137 pd sequencer;
+#X restore -14 137 pd sequencer;
 #X obj 870 -99 bng 30 250 50 0 \$0-open empty new_wavfile 0 40 0 20
 -207463 -45076 -45076;
 #X obj 902 -99 bng 15 250 50 0 \$0-normalize empty normalize 17 7 0
 10 -262144 -1 -1;
 #X obj -14 123 hsl 800 12 0 1 0 0 \$0-end \$0-end-r empty -2 -8 0 10
--182874 -1 -1 59500 1;
+-182874 -1 -1 9400 1;
 #X obj -14 -27 cnv 15 800 148 empty \$0-cnvtable empty 20 12 0 14 -224813
 -1 0;
-#X obj 472 -26 cnv 15 111 148 empty \$0-selectarea 4 0 80 0 180 -195986
+#X obj -12 -26 cnv 15 94 148 empty \$0-selectarea 0 0 80 0 180 -195986
 -247041 0;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array \$0-L 158976 float 2;
-#X coords 0 1 158976 -1 800 75 1;
+#X array \$0-L 109083 float 2;
+#X coords 0 1 109083 -1 800 75 1;
 #X restore -14 -28 graph;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array \$0-R 158976 float 2;
-#X coords 0 1 158976 -1 800 75 1;
+#X array \$0-R 109083 float 2;
+#X coords 0 1 109083 -1 800 75 1;
 #X restore -14 47 graph;
 #X obj -12 -40 hsl 800 12 0 1 0 0 \$0-start \$0-start-r empty -2 -8
-0 10 -182874 -1 -1 48400 1;
+0 10 -182874 -1 -1 0 1;
 #X obj 903 -82 bng 15 250 50 0 \$0-mono2stereo empty mono2stereo 17
 7 0 10 -262144 -1 -1;
