@@ -542,9 +542,9 @@
 #X obj 323 445 s \$0-timelineR;
 #X obj 500 404 r \$0-timelineS;
 #X msg 78 360 \; location 0 \; speed \$1;
-#X floatatom 81 304 5 0 0 0 - - -;
+#X floatatom 149 255 5 0 0 0 - - -;
 #X obj 104 284 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 3;
+-1 -1 6;
 #X obj 48 293 * 25;
 #X obj 346 162 bng 15 250 50 0 empty \$0-run empty 17 7 0 10 -262144
 -1 -1;
@@ -559,7 +559,7 @@
 #X obj 652 341 r \$0-tempo;
 #X obj 634 366 *;
 #X obj 635 318 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2200 1;
+-1 -1 0 1;
 #X floatatom 498 371 5 0 0 0 - - -;
 #X obj 207 333 / 44.1;
 #X obj 76 425 sel 1;
@@ -568,17 +568,17 @@
 -258113 0 1;
 #X obj 82 332 spigot;
 #X obj 131 315 tgl 15 0 empty \$0-play empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X obj 634 434 s \$0-run;
 #X obj 510 324 spigot;
 #X obj 548 306 tgl 15 0 empty \$0-scratch empty 17 7 0 10 -262144 -1
--1 0 1;
+-1 1 1;
 #X obj 499 281 r \$0-timelineS;
 #N canvas 0 0 450 300 mode 0;
 #X obj 105 117 tgl 30 0 \$0-play empty play 0 -10 0 10 -262144 -13381
--4160 1 1;
+-4160 0 1;
 #X obj 141 117 tgl 30 0 \$0-scratch empty scratch 0 -10 0 10 -228856
--13381 -13381 0 1;
+-13381 -13381 1 1;
 #X obj 106 176 == 0;
 #X obj 145 175 == 0;
 #X connect 0 0 2 0;
@@ -589,21 +589,26 @@
 #X restore 167 -9 pd mode;
 #X obj 323 419 spigot;
 #X obj 365 402 tgl 15 0 empty \$0-play empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X obj 161 313 sel 1;
 #X obj 545 531 s \$0-cnv;
 #X msg 444 498 pos 85 52;
 #X obj 547 474 + 85;
 #X msg 552 494 pos \$1 52;
 #X obj 87 52 hsl 555 100 0 1 0 0 \$0-timelineS \$0-timelineR empty
--2 -6 0 8 -228856 -262144 -1 55400 1;
-#X obj 640 52 cnv 5 7 100 empty \$0-cnv empty 20 12 0 14 -262144 -1
+-2 -6 0 8 -228856 -262144 -1 52500 1;
+#X obj 610 52 cnv 5 7 100 empty \$0-cnv empty 20 12 0 14 -262144 -1
 0;
 #N canvas 0 0 450 300 (subpatch) 0;
-#X array array1 65741 float 0;
-#X coords 0 1 65740 -1 560 100 1;
+#X array array1 81955 float 0;
+#X coords 0 1 81954 -1 560 100 1;
 #X restore 84 52 graph;
 #X obj 546 448 * 555;
+#X obj 741 116 rhythm_estimator;
+#X obj 742 82 beat;
+#X obj 742 51 rhythm;
+#X msg 654 500 vis_size \$1 100;
+#X floatatom 738 440 5 0 0 0 - - -;
 #X connect 3 0 1 0;
 #X connect 4 0 20 0;
 #X connect 4 1 21 0;
@@ -649,3 +654,5 @@
 #X connect 48 0 49 0;
 #X connect 49 0 46 0;
 #X connect 53 0 48 0;
+#X connect 57 0 46 0;
+#X connect 58 0 57 0;
